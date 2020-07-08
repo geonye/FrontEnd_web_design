@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>(G)I-DLE/MUSIC</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+         
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JQuery 최신버전-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+SC:wght@900&family=Permanent+Marker&family=Raleway:wght@500;600&display=swap');    
+        
+    body {
+       font-family: 'Raleway', sans-serif;
+       font-weight: 600;  
+       font-size: 1.5em;
+    }    
+    body, html {
+      height: 100%;
+      margin: 0;
+    }    
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      font-weight: 600;   
+    }
+    .navbar-custom {
+        background-color: black;
+    }
+    .navbar-brand {
+        padding: 0 50px 0 30px;
+    }       
+    .navbar-brand img {
+        overflow: hidden;
+        position: relative;
+        height: 50px;
+        width: 67px;
+    }
+    #myNavbar a:hover {
+        background: #E11900; 
+    } 
+    #myNavbar a:active {
+        background: #E11900; 
+    }    
+        
+    #menu a {
+      color: white;  
+      padding-left: 20px;
+    } 
+    .bg {
+      /* The image used */
+      background-image: url("jacket/gidle_senorita.jpg");
+      background-attachment: fixed;
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 50%;
+    }  
+    .bg-cover{
+       position: absolute;
+       height: 50%;
+       width: 100%;
+       background-color: rgba(0, 0, 0, 0.5);   
+       z-index:1;
+    }
+    .bg .content{
+     position: absolute;
+     top:38%;
+     left:50%;
+     transform: translate(-50%, -50%);
+     font-size:1.5rem;
+     color: white;
+     z-index: 2;
+     text-align: center;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      width: 45px;
+      height: 45px;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 13px;
+      border: 2px solid white;
+      outline: none;
+      background-color: #feceab;
+      color: white;
+      cursor: pointer;
+      padding: 7px;
+      border-radius: 50%;
+    }
+    #myBtn:hover {
+      background-color: black;
+      border: 2px solid black;
+    }    
+        
+    /*상단바 버튼*/
+    .btn-group button { 
+      display: block;
+      background-color: inherit;
+      color: white;
+      padding: 22px 16px;
+      width: inherit;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    .btn-group button:hover {
+      background-color: #A7A8A9;
+    }  
+    .bottom-left {
+      position: absolute;
+      bottom: 13px;
+      left: 25px;
+      font-size: 25px; 
+      font-family: 'HY울릉도M';
+    }
+    hr {
+        border: 0;
+        height: 2px;
+        background-color: #EAE6DA;
+        margin: 20px 0 30px 0;
+    }
+    
+    .img-cover{
+       position: ;
+       height: 30%;
+       width: 30%;
+       background-color: rgba(0, 0, 0, 0.5);               
+       z-index:1;
+    }    
+        
+    footer {
+      padding: 25px;
+      background-color: #feceab;
+      font-weight: 600;   
+    }
+    .sns_menu img {
+        width: 30px; 
+        background-color: #feceab;
+        margin: 5px 10px 10px 5px;
+        padding: 5px 5px 5px 5px;
+        
+    }
+      
+      
+    /* Float four columns side by side */
+    .column {
+      float: left;
+      width: 20%;
+      padding: 10px;
+    }
+        
+    .row1 {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    .row2 {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+      justify-content: center;
+    }
+   
+   
+   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+      .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 100%;
+      }
+    }     
+
+    .container > h4 {
+        text-align: left;
+        padding: 30px 0 0 0;
+       
+    }
+    iframe {
+        width: 100%;
+    }
+    #video {
+        margin-bottom: 300px;
+    }
+    .container {
+       font-family: 'Raleway', sans-serif;
+       font-weight: 500;
+       margin-top: 30px; 
+    }
+    .w3-col {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+        
+    </style>
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-custom navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href=".\idle.html"><img src="logo_1.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=".\idle.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">(G)I-DLE<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href=".\introduction.html">INTRODUCTION</a></li>
+            <li><a href=".\member.html">MEMBER</a></li>
+          </ul>
+        </li>
+        <li><a href=".\history.html">HISTORY</a></li>
+        <li><a href=".\music.html">MUSIC</a></li>
+        <li><a href=".\gallery.html">GALLERY</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="bg">
+  <div class="content">
+      <h1>MUSIC</h1>
+  </div>
+  <div class="bg-cover"></div>
+</div>
+
+
+<!-- Main Content -->
+<div class="container text-center">
+   <h4>ALBUM</h4>
+    <!-- Photo Grid -->
+    <div class="row1"> 
+      <div class="column">
+          <button type="button" class="btn" id="1" data-toggle="modal" data-target="#myModal1" style="padding: 0"><a href="#myModal1"><img src="album/itrust.jfif" style="width:100%"></a></button>
+      </div>
+      
+ <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content" style="text-align: justify">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">앨범 정보</h3>
+        </div>
+        <div class="modal-body">
+           <div class="container-fluid">
+               <div class="w3-row" style="margin: 0;">
+                <div class="w3-col w3-container s4 m4 l4"><img src="album/itrust.jfif" style="width: 90%"></div>
+                <div class="w3-col w3-container s8 m8 l8"><br>
+                   <h3 style="margin-top: 0px">I TRUST</h3>
+                   <h4>(여자) 아이들</h4>
+                   <p>2020.04.06 &#8226; 댄스</p>
+                </div>
+               </div>
+                    
+                <div class="w3-row" style="border: 1px solid black; border-radius: 10px; margin-top: 15px">
+                    <p style="padding: 18px">
+                    편견이란 답답한 우리를 무너뜨린 ‘LION'의 귀환!<br>
+                    (여자)아이들만의 장르를 만들어가는 ‘I' 시리즈 세 번째 앨범 [I trust] 세상을 향한 당당한 외침, ‘Oh my god'<br><br>  
+                    
+                    독보적인 콘셉트 소화력과 무한한 가능성으로 그들만의 장르를 구축하는 아티스트 (여자)아이들이 9개월 만에 세 번째 미니앨범 [I trust]를 발표한다.<br><br> 
+                    
+                    ‘나' 그리고 ‘우리'에 대한 정의를 선포한 데뷔 앨범 [I am]과 셀프 프로듀싱을 통해 성장하는 모습을 보여준 미니 2집 [I made]에 이어 세 번째로 선보이는 [I trust]. (여자)아이들의 미니 3집 [I trust]는 믿음의 존재를 ‘나'에서부터의 시작으로 담아내었다. 'I trust=나는 나를 믿는다'는 뜻을 담고 있는 앨범으로, (여자)아이들만의 당당함을 표현했다.<br><br>
+                    
+                    타이틀곡 ‘Oh my god'은 거부, 혼란, 인정, 당당함의 감정을 겪으며 현실과의 부딪침을 통해 나 자신을 믿어야 한다는 것을 깨닫게 되는 곡이다. ‘나는 나를 믿는다(I trust). 나 자신을 믿는다는 것만으로도 나는 당당해질 수 있다'는 주제를 표현하고 있다. 곡의 전개마다 변화되는 과감한 리듬 체인지가 돋보이는 Urban Hiphop 장르의 곡으로, 빈티지한 피아노 소리와 808베이스가 이끌어가는 몽환적인 분위기 그리고 강렬한 사운드가 인상적이다.<br><br> 
+                    
+                    사운드의 다이내믹한 전개는 앨범의 비주얼 콘셉트에도 여실히 나타난다. 마치 악마와 천사의 형상을 담은 듯한 티저 이미지는 팬들의 열띤 반응을 불러일으켰다. 특히 이번 [I trust] 피지컬 앨범은 블랙 테마의 ‘True Ver.'과 화이트 테마의 ‘Lie Ver.' 2종으로 제작되어 특별함을 더했다. 흑백의 논리로 양분할 수 없는 순수하면서도 지독한 사랑의 정의는 ‘Oh my god' 뮤직비디오를 통해서도 강렬한 메시지를 남긴다. 보랏빛 물과 붉은 진흙 속에 온몸을 담근 채 혼란스러운 자아를 표현하는 듯한 퍼포먼스나 블랙 바디 페인팅, 얼굴 위로 피를 흘려보내는 모습 등 걸그룹으로서 선뜻 시도하기 힘든 장면들을 과감히 연기했다.<br><br> 
+                    
+                    ‘LION' 무대에서 걸그룹의 편견이란 우리를 무너뜨리고 스스로에게 왕관을 씌운 주체적인 여성 서사를 보여준 (여자)아이들. ‘Oh my god'에서 선보이는 한 차원 업그레이드된 장엄한 퍼포먼스는 한계를 깨부수는 일종의 카타르시스를 선사한다. 더 이상의 수식어가 필요 없는, ‘(여자)아이들'이라는 새로운 장르를 개척하고 있는 이들의 무한한 미래가 기다려진다.
+                    </p><hr> 
+                    
+                    <h3 style="padding: 0 10px 0 10px">Track List</h3>
+                    <p style="padding: 18px">
+                        <b>01. Oh my god</b><br> 
+                        <b>Composed by 소연, 빅싼초(Yummy Tone)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 소연</b><br><br>  
+
+                        ‘거부', ‘혼란', ‘인정', ‘당당함'의 감정을 겪으며 현실과의 부딪침을 통해 나 자신을 믿어야 한다는 것을 깨닫게 된다. 나는 나를 믿는다(I trust). 나 자신을 믿는다는 것만으로도 나는 당당해질 수 있다.<br><br>  
+                        '나는 나를 믿는다'라는 주제로 시작된 타이틀곡 ‘Oh my god'은 곡의 전개마다 변화되는 과감한 리듬 체인지가 돋보이는 Urban Hiphop 장르의 곡이다. 빈티지한 피아노 소리와 808베이스가 이끌어가는 몽환적인 분위기 그리고 강렬한 사운드가 인상적이며, 오직 (여자)아이들만이 표현할 수 있는 곡이다. 
+                    </p>
+                    
+                    <p style="padding: 18px">
+                        <b>02. 사랑해</b><br> 
+                        <b>Composed by 소연, 빅싼초(Yummy Tone)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 소연</b><br><br>  
+
+                       사랑하지 않으려 하지만 '사랑해'라는 말이 목 끝까지 차올라 결국은 너에게 사랑한다는 감정을 전하게 된다.<br><br>
+
+                       사랑이 가진 강한 에너지를 표현한 ‘사랑해’는 Trap 장르의 곡으로 묵직한 808베이스와 단단한 드럼비트, 멤버 소연이 직접 녹음한 ‘똑딱’ 소리가 어우러져 장난스럽지만 진지하고, 밝지만 어두운 분위기를 연출하고 있다. 솔직하고 과감한 소연 특유의 가사와 중독성 강한 훅이 이 곡의 특징이다.
+                    </p>
+                    <p style="padding: 18px">
+                        <b>03. Maybe</b><br> 
+                        <b>Composed by 소연, 이우민 "collapsedone"</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 이우민 "collapsedone"</b><br><br>  
+
+                       나의 마음과 현실에서 일어나는 일들이 부딪친다. 그 과정에서 나도 모르게 확신 없는 불안함에 대해 혼잣말을 되풀이한다. ‘아마도’라고..<br><br>  
+
+                       ‘Maybe’는 서정적인 코드 진행과 미니멀한 구성의 트랙 그리고 감성적인 (여자)아이들의 보이스가 어우러져 몽환적인 분위기를 연출하는 팝/댄스 곡이다.
+                    </p>  
+                    <p style="padding: 18px">
+                        <b>04. LION</b><br> 
+                        <b>Composed by 소연, 빅싼초(Yummy Tone)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 소연</b><br><br>  
+
+                       그 어떤 의심과 질타에 흔들리지 않는다. 오로지 나를 믿으며 최고의 자리에 오르려 한다.<br><br>
+
+                       ‘LION’은 (여자)아이들 소연과 빅싼초가 의기투합한 곡으로 강렬하고 웅장한 드럼과 808베이스 사운드가 인상적이며, 특정 장르나 틀에 얽매이지 않는 두 작곡가 특유의 감각으로 완성한 곡이다. 'Queen'으로서의 타고난 품격과 카리스마를 사자에 비유한 가사는 처절하고 냉정하지만 한편으론 아름답고 강인하며 성스럽다. 특히, 왕좌를 차지하고 지키기 위한 모든 싸움과 인내 그리고 상처가 고스란히 가사로 새겨져 있다.
+                    </p>  
+                    <p style="padding: 18px">
+                        <b>05. Oh my god (English Ver.)</b><br> 
+                        <b>Composed by 소연, 빅싼초(Yummy Tone)</b><br> 
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 소연</b><br>
+                        <b>English Lyrics by Lauren Kaori</b><br><br>  
+
+                       (여자)아이들의 글로벌 팬들을 위해 특별히 제작된 타이틀곡 ‘Oh my god’의 영어 버전이다.<br><br>
+                    </p>   
+                </div>
+            </div>
+           </div>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="column">
+        <button type="button" class="btn" id="1" data-toggle="modal" data-target="#myModal2" style="padding: 0"><a href="#myModal2"><img src="album/uhoh.jfif" style="width:100%"></a></button>
+      </div> 
+       
+<!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content" style="text-align: justify">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">앨범 정보</h3>
+        </div>
+        <div class="modal-body">
+           <div class="container-fluid">
+               <div class="w3-row" style="margin: 0;">
+                <div class="w3-col w3-container s4"><img src="album/uhoh.jfif" style="width: 90%"></div>
+                <div class="w3-col w3-container s8 "><br>
+                   <h3 style="margin-top: 0px">Uh-Oh</h3>
+                   <h4>(여자) 아이들</h4>
+                   <p>2019.06.26 &#8226; 랩/힙합</p>
+                </div>
+               </div>
+                    
+                <div class="w3-row" style="border: 1px solid black; border-radius: 10px; margin-top: 15px">
+                    <p style="padding: 18px">
+                    <b>90년대 레트로 감성의 재해석, 요즘 ‘아이들’만의 힙합 감성!<br>
+                    (여자)아이들 걸크러시 뉴트로 붐뱁 ‘Uh-Oh’</b><br><br>  
+                    
+                    (여자)아이들이 디지털 싱글 ‘Uh-Oh'로 돌아왔다. 'Uh-Oh'는 흔히 당황스러운 상황에서 절로 나오는 추임새로, 처음엔 관심 없다가 뒤늦게 와서 친한 척하는 사람들을 재치 있게 디스하는 의미로 이번 곡의 메인 키워드로 사용됐다.<br><br> 
+                    
+                    뉴트로 붐뱁 장르를 표방한 'Uh-Oh'는 ‘LATATA’, ‘한(一)’, ‘Senorita’ 3연작 흥행을 성공시킨 프로듀서이자 리더 소연이 만든 곡으로, (여자)아이들 만의 세련된 감성으로 90년대 트렌드를 재해석하며 걸그룹으로서는 흔치 않는 ‘붐뱁’ 장르에 과감히 도전한다. 요즘 ‘아이들’ 세대에겐 옛 문화에 대한 새로움을, 기성세대에겐 향수를 불러일으키며 연령 불문 전 세대의 취향을 저격할 예정이다. 절로 고개를 끄덕이게 하는 올드스쿨 스타일의 둔탁한 드럼 룹을 기반으로, 강하고 깊은 맛의 베이스, 잡다한 악기 없이 정석적인 피아노, 스트링, 아날로그 신시사이저 사운드가 돋보인다. 무엇보다 멤버들의 목소리를 이용한 스크래치를 통해 전통 힙합 특유의 맛과 멋을 각인시킨다.<br><br>
+                    
+                    장르의 파격적인 변화는 비주얼 콘셉트에서도 여실히 느껴진다. 투박한 올드 카와 흙먼지로 가득한 토산을 배경으로, 로우 앵글로 담아낸 (여자)아이들의 빈티지하고 강렬한 이미지는 대중들의 뜨거운 관심을 이끌어냈다. 90년대 실루엣을 완벽하게 소화한 멤버들의 스타일링 변화 또한 주목해야 할 포인트다. 디지페디 성원모 감독과 함께한 뮤직비디오에서는 전형적인 걸 그룹보다는 힙합 아티스트의 비디오 느낌을 연출, 걸 크루와 바이커, 군중 속에서의 퍼포먼스로 진취적이고 도발적인 이미지로 메이킹했다.<br><br> 
+                    
+                    에스닉하면서도 트렌디한 감성의 뭄바톤 ‘LATATA’와 ‘한(一)’, 웅장함 속에 화려함과 성숙함을 담았던 ‘Senorita’와는 다른 직설적이고 묵직한 붐뱁에 대한 시도는 (여자)아이들이 자신만의 독보적인 컬러를 정립해가는 과정이다. 여느 걸그룹에게서 찾아볼 수 없는 특별한 시도이자 오직 (여자)아이들만이 소화할 수 있는 진짜배기 힙합이다.<br><hr> 
+                    
+                    <h3 style="padding: 0 10px 0 10px">Credit</h3>
+                    <p style="padding: 18px">
+                        <b>Composed by 소연, 쥰, MooF(153/Joombas)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 쥰, MooF(153/Joombas)</b><br><br>
+                        
+                        <b>Chorus 전재희, 소연, 쥰</b><br>  
+                        <b>Bass 쥰</b><br>  
+                        <b>Piano MooF(153/Joombas)</b><br>
+                        <b>Synthesizer 쥰</b><br>
+                        <b>String MooF(153/Joombas)</b><br><br>
+                        
+                        <b>Recording engineer 전부연 @ Cube Studio</b><br>  
+                        <b>Mixing engineer 조씨아저씨 @ Cube Studio</b><br>  
+                        <b>Mastering engineer 권남우 @ 821 Sound Mastering</b><br><br>
+                    </p>
+                </div>
+            </div>
+           </div>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+    </div>
+       
+      <div class="column">
+        <button type="button" class="btn" id="1" data-toggle="modal" data-target="#myModal3" style="padding: 0"><a href="#myModal3"><img src="album/imade.jfif" style="width:100%"></a></button>
+      </div>
+      
+<!-- Modal -->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content" style="text-align: justify">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">앨범 정보</h3>
+        </div>
+        <div class="modal-body">
+           <div class="container-fluid">
+               <div class="w3-row" style="margin: 0;">
+                <div class="w3-col w3-container s4 m4 l4"><img src="album/imade.jfif" style="width: 90%"></div>
+                <div class="w3-col w3-container s8 m8 l8"><br>
+                   <h3 style="margin-top: 0px">I MADE</h3>
+                   <h4>(여자) 아이들</h4>
+                   <p>2019.02.26 &#8226; 댄스</p>
+                </div>
+               </div>
+                    
+                <div class="w3-row" style="border: 1px solid black; border-radius: 10px; margin-top: 15px">
+                    <p style="padding: 18px">
+                    <b>신인상 6관왕에 빛나는 2018년 최고의 루키 (여자)아이들!<br>
+                    눈부신 프로듀싱 역량을 발휘한 전곡 자체 제작 앨범 [I made] 공개!<br>
+                    탑 아티스트의 궤도로 향하는 매혹적인 퍼포먼스 'Senorita’</b><br><br>  
+                    
+                    2018년 5월, 전 세계가 주목하는 (여자)아이들의 핫 데뷔와 그 해 이뤄낸 눈부신 업적은 가히 2018년 최고의 루키라고 해도 손색이 없다. 각종 연말 시상식 신인상을 석권하며 글로벌 메가 히트 행보를 인정받은 (여자)아이들이 두 번째 미니앨범 [I made]를 발표했다.<br><br> 
+                    
+                    (여자)아이들의 두 번째 미니 앨범 [I made]는 타이틀곡 'Senorita'를 포함, 수록곡 전곡을 멤버들이 직접 프로듀싱했다는 뜻을 내포하고 있다. 데뷔 앨범 [I am]의 연장선이자 후속작에 대한 기대감까지 엿볼 수 있는, 멤버들이 직접 구상하고 결정한 네이밍이다. [I am] 앨범에서는 (여자)아이들이 누구인지, 그들이 각자 어떤 매력을 지녔는지 보여주었다면 이번 [I made] 앨범을 통해서는 더욱 성숙해지고 매혹적인 퍼포먼스를 선사한다.<br><br>
+                    
+                    ‘LATATA’, ‘한(一)’에 이어 리더 소연이 작사 작곡한 타이틀곡 ‘Senorita’는 첫눈에 반한 상대에게 끌리는 마음을 당당하고 세련되게 표현한 곡으로, 전작의 중독성을 뛰어넘는 멜로디와 (여자)아이들만의 독보적인 콘셉트 소화력이 만나 완벽한 시너지를 발산한다. 또한 한층 짙어진 멤버들의 보컬과 완성도 높은 댄스 퍼포먼스가 조화를 이루어 눈과 귀를 황홀하게 만든다.<br><br> 
+                    
+                    공식 SNS 채널을 통해 공개한 콘셉트 이미지에서는 성숙하고 엘레강스한 모습과 고혹적이고 단아한 모습으로 기대감을 한껏 고조시켰다. 또한 글로벌 코스메틱 브랜드 ‘Kaja’ 모델로 발탁되는 등 셀러브리티의 면모를 인정받은(여자)아이들은 ‘Senorita’ 뮤직비디오에서 팔색조 같은 비주얼로 컬러풀하고 통통 튀는 매력을 마음껏 뽐낸다. 아찔할 만큼 달콤한 사랑에 빠진 모습과, 위트 있게 위험을 피해가는 당당한 모습은 열정적인 브라스 사운드와 어우러져 강한 잔상을 남긴다.<br><br> 
+                    
+                    “미니 2집 [I made]는 ‘I’ 시리즈의 두 번째 작품으로 아이(들)이 만든 앨범이라는 의미를 강조하고자 했습니다. 하나의 수식어로 정의할 수 없는 아이들의 다양한 색깔을 강렬하게 표현한 타이틀곡 ‘Senorita’부터 세련된 반전 매력의‘What’s Your Name’, 처음 도전해보는 쓸쓸하고 어두운 느낌의 R&amp;B 트랙 ‘싫다고 말해’, 또 사랑을 가득 담은 재즈곡 ‘주세요’까지 소연의 자작곡 4곡이 담겨있고요. 그리고 민니의 첫 번째 자작곡이자 M2 리얼리티 ‘To NEVERLAND’를 통해 선공개된 몽환적인 느낌의 ‘Blow Your Mind’까지 다양하고 알차게 준비했습니다. 많이 사랑해주셨으면 좋겠습니다!”<br><br> 
+                    
+                    <b>Comment by ‘(여자)아이들’</b>
+                    </p><hr> 
+                    
+                    <h3 style="padding: 0 10px 0 10px">Track List</h3>
+                    <p style="padding: 18px">
+                        <b>01. Senorita</b><br> 
+                        <b>Composed by 소연, 빅싼초(Yummy Tone)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 소연</b><br><br>  
+
+                        ‘Senorita’는 Dance-pop 장르의 곡으로 언플러그드 사운드의 베이스 기타와 피아노, 브라스 등의 악기 사용으로 감성적이면서도 열정적인 분위기를 연출한다. 이국적인 정취를 살리는 ‘Senorita’ 후렴구와 코러스 포인트는 브라질 국적의 방송인 ‘카를로스 고리토’가 직접 녹음하여 스페인어 특유의 강렬함을 표현했다. 첫눈에 반한 상대에게 끌리는 마음을 담은 당당한 노랫말과 한층 짙어진 (여자)아이들의 보이스가 완벽한 조화를 이루고 있다.
+                    </p>
+                    <p style="padding: 18px">
+                        <b>02. What’s Your Name</b><br> 
+                        <b>Composed by 소연, 이우민 "collapsedone"</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 이우민 "collapsedone"</b><br><br>  
+
+                       감성적인 코드 진행과 호소력 있는 보이스로 시작해 강력한 EDM 비트와 색소폰 리드 사운드로 전개되는 드롭이 인상적인 곡이다. 예측하기 어려운 재미있는 전개, 트렌디한 비트 위 중독성 있는 노랫말로 누구나 흥얼거리게 되는 곡이다.
+                    </p>
+                    <p style="padding: 18px">
+                        <b>03 싫다고 말해</b><br> 
+                        <b>Composed by 소연</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 후디니(Houdini), 소연</b><br><br>  
+
+                       곡 전체적인 전개의 다이내믹을 천천히 가져가되, 기승이 느껴지는 전개 속에서 FX로 고조되는 분위기를 살린 발라드 곡이다. 엇나가는 마음을 담은 가사에 보다 집중할 수 있도록 음악적인 디테일은 최대한 자제하여 멤버들의 매력적인 보컬을 더욱 가까이 느낄 수 있다.
+                    </p>  
+                    <p style="padding: 18px">
+                        <b>04. 주세요</b><br> 
+                        <b>Composed by 소연, 후디니(Houdini)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 후디니(Houdini), 소연</b><br><br>  
+
+                        언젠가 연인에게 꼭 불러주고 싶은 마음을 담은 곡으로 사랑하는 사람에게 보내는 귀여운 고백 송. 바운스 리듬의 피아노 리드에 곡의 분위기를 살리는 기타 리프, 메인 보컬과 잘 어우러지는 코러스가 인상 깊다. 누구나 쉽게 따라 부를 수 있는 가사와 멜로디로, 8비트 바운스에 중간중간 삼연음으로 듣는 즐거움까지 더했다.
+                    </p>  
+                    <p style="padding: 18px">
+                        <b>05. Blow Your Mind</b><br> 
+                        <b>Composed by 민니, Flow Blow</b><br> 
+                        <b>Lyrics by 민니, Flow Blow, 소연</b><br>  
+                        <b>Arranged by Flow Blow, 민니</b><br>
+
+                       (여자)아이들의 멤버 ‘민니’와 프로듀서 듀오 ‘Flow Blow’가 함께 만든 곡으로 세련된 Soul-Trap R&amp;B 장르의 POP 곡이다. 묵직한 베이스 사운드 위로 나른한 멤버들의 목소리가 어울려지며 몽환적인 분위기를 연출한다. 다이내믹한 빌드업 후에 나오는 드롭에서는 미니멀하면서 중독성 있는 사운드가 귀를 사로잡는다.<br><br>
+                    </p>   
+                </div>
+            </div>
+           </div>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+    </div>      
+      
+      <div class="column">
+        <button type="button" class="btn" id="1" data-toggle="modal" data-target="#myModal4" style="padding: 0"><a href="#myModal4"><img src="album/hann.jfif" style="width:100%"></a></button>
+      </div>
+      
+<!-- Modal -->
+  <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content" style="text-align: justify">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">앨범 정보</h3>
+        </div>
+        <div class="modal-body">
+           <div class="container-fluid">
+               <div class="w3-row" style="margin: 0;">
+                <div class="w3-col w3-container s4 m4 l4"><img src="album/hann.jfif" style="width: 90%"></div>
+                <div class="w3-col w3-container s8 m8 l8"><br>
+                   <h3 style="margin-top: 0px">Uh-Oh</h3>
+                   <h4>(여자) 아이들</h4>
+                   <p>2018.08.14 &#8226; 댄스</p>
+                </div>
+               </div>
+                    
+                <div class="w3-row" style="border: 1px solid black; border-radius: 10px; margin-top: 15px">
+                    <p style="padding: 18px">
+                    <b>음악방송 1위와 음원사이트 상위권을 휩쓸며,<br> 
+                    전 세계를 강타한 괴물신인 (여자)아이들<br> 
+                    ‘LATATA’의 열풍을 이어갈 영원한 사랑은 없다는 운명론적 이야기 '한(一)’</b><br><br>  
+                    
+                    2018년 5월, 뛰어난 외모와 신인이라고는 믿기지 않을 만큼의 놀라운 실력으로 데뷔한 (여자)아이들이 2개월 만에 이뤄낸 성적이다. 전 세계를 들썩이며 글로벌 특급 신인으로 인정받은 (여자)아이들은 디지털 싱글 ‘한(一)’을 발매하며 거침없는 질주를 이어간다.<br><br> 
+                    
+                    전작 ‘LATATA’에서 이어지는 뭄바톤(Moombathon) 소스에 하우스 장르를 기반으로 만들어진 노래 '한(一)’은 멤버 소연의 자작곡으로 배신과 이별, 그리고 혼자 남겨진 감정을 ‘한’이라는 중의적인 소재로 표현한 곡이다.아이돌 신인그룹으로서는 이례적으로 데뷔 앨범의 타이틀곡을 멤버의 자작곡으로 내세우며, 그 실력을 인정받은 멤버 소연이 이번 디지털 싱글에서 또다시 작곡가로 나섰다.<br><br>
+                    도입부부터 청각을 자극하며 시선을 집중시키는 멤버 민니의 휘파람 소리는 유니크하고 서늘한 분위기를 연출, 청자에게 강렬한 잔향을 남긴다. 묵직하고 차분한 드럼 비트가 중심을 잡고, 귀를 사로잡는 오르간 사운드는 곡의 전체적인 분위기를 몽환적이고 신비롭게 리드한다. 각종 토속 악기 소스를 촘촘히 쌓은 레이어 위로 여섯 멤버의 보컬 톤이 녹아내리듯 어우러졌다.<br><br>
+                    사랑하는 상대를 위해 적극적으로 춤추던 모습처럼, 이별에 상처 입어도 무너지지 않고 당당한 애티튜드를 표방하는 직설적인 노랫말은 간담을 서늘하게 만든다. 주문처럼 널 잊으리라 외치는 (여자)아이들에게 어느새 마법처럼 사로잡힌 모습을 발견할 수 있을 것이다.<br><br>
+                    
+                    ‘LATATA'에 이어 다시 한 번 쟈니브로스 홍원기 감독의 디렉팅으로 완성된 뮤직비디오는 스스로를 기억 속에 가두고 마음을 닫아버린 아이들의 모습을 담았다. 뚜렷한 콘트라스트와 컬러풀한 조명, 화려한 세트에서 선보이는 군무 퍼포먼스와 연결되는 거울, 천, 꽃 등의 오브제를 활용한 감성적인 이미지 라인은 한시도 지루할 틈 없이 눈길을 사로잡는다.<br><br> 
+                    
+                    그 어느 때보다도 무더운 여름의 열기만큼 식지 않는 (여자)아이들의 활약이 기대된다.<br><br>
+                    
+                     "'한(一)'은 'LATATA'와는 또 다른 색깔을 담은 곡입니다. 멤버들을 가장 잘 아는 리더 소연이의 자작곡인 만큼, 각자의 개성과 매력이 어우러져 '하나'의 모습이 되도록 만들었습니다. 열심히 준비한 만큼 예쁘게 봐 주세요!"<br><br> 
+                    
+                    <b>Comment by ‘(여자)아이들’</b>
+                    </p><hr> 
+                    
+                    <h3 style="padding: 0 10px 0 10px">Credit</h3>
+                    <p style="padding: 18px">
+                        <b>Composed by 소연, 빅싼초(Yummy Tone)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 소연</b><br><br>
+                        
+                        <b>Chorus 전재희</b><br>  
+                        <b>Whistle 민니</b><br>  
+                        <b>Piano 빅싼초(Yummy Tone)</b><br>
+                        <b>Organ 소연</b><br><br>
+                        <b>Synthesizer 빅싼초(Yummy Tone)</b><br>
+                        
+                        <b>Recording engineer 전부연 @ Cube Studio</b><br>  
+                        <b>Mixing engineer 조씨아저씨 @ Cube Studio</b><br>  
+                        <b>Mastering engineer 권남우 @ 821 Sound Mastering</b><br><br>
+                    </p>
+                </div>
+            </div>
+           </div>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+    </div>      
+      
+      <div class="column">
+        <button type="button" class="btn" id="1" data-toggle="modal" data-target="#myModal5" style="padding: 0"><a href="#myModal5"><img src="album/iam.jfif" style="width:100%"></a></button>
+      </div>
+      
+<!-- Modal -->
+  <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content" style="text-align: justify">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">앨범 정보</h3>
+        </div>
+        <div class="modal-body">
+           <div class="container-fluid">
+               <div class="w3-row" style="margin: 0;">
+                <div class="w3-col w3-container s4 m4 l4"><img src="album/iam.jfif" style="width: 90%"></div>
+                <div class="w3-col w3-container s8 m8 l8"><br>
+                   <h3 style="margin-top: 0px">I AM</h3>
+                   <h4>(여자) 아이들</h4>
+                   <p>2018.05.02 &#8226; 댄스, 발라드</p>
+                </div>
+               </div>
+                    
+                <div class="w3-row" style="border: 1px solid black; border-radius: 10px; margin-top: 15px">
+                    <p style="padding: 18px">
+                    <b>'(여자)아이들' 1st mini album [I am]</b><br><br> 
+                                         
+                    2018년을 가장 뜨겁게 불태울 큐브의 신예 걸그룹 '(여자)아이들'<br> 
+                    강렬함과 화려함으로 눈과 귀를 사로잡을 "LATATA"<br> 
+                    '(여자)아이들' 데뷔 앨범 [I am]<br><br> 
+                     
+                    2018년을 가장 뜨겁게 만들 큐브 엔터테인먼트의 글로벌 6인조 그룹 '(여자)아이들'이 데뷔한다. 다국적의 멤버들로 구성된 '(여자)아이들'은 각자의 개성과 매력을 한데 모아 가장 큰 시너지를 발휘하겠다는 당찬 포부를 담고 있다. Mnet 프로듀스 101, 언프리티 랩 스타를 통해 시청자들에게 눈도장을 찍었던 실력파 래퍼 '전소연'을 리더로, '미연', '수진', '우기', '슈화', '민니'가 멤버로 구성되어 있다. 특히 데뷔 전 공개한 프로필 사진과 게릴라 공연, 노래 커버 영상들로 뛰어난 퍼포먼스와 가창력뿐만 아니라 시선을 사로잡는 비주얼을 선보이며 데뷔에 대한 기대감을 한껏 높였다.<br><br> 
+                    
+                    기존의 여느 걸그룹과는 차원이 다른 독특한 개성과 매력으로 가요계를 휩쓸 '(여자)아이들'의 이번 앨범은 데뷔 앨범인 만큼 '(여자)아이들'의 아이(I)에 뜻을 담아 팀과 멤버들에 대해 소개하는 의미로 [I am]으로 지었다. 멤버 여섯 명의 환상적인 하모니는 앨범의 타이틀곡인 "LATATA"를 필두로 여섯 트랙으로 나누어 보여준다.<br><br>
+                    
+                    타이틀곡 "LATATA"는 전 세계적으로 열풍을 이끌고 있는 뭄바톤 트랩(Moombahton trap) 장르의 곡으로, 강렬하고 파워풀한 퍼포먼스에 중점을 두고 있는 '(여자)아이들'의 콘셉트를 보여주기에 충분하다. 사랑에 빠진 여자가 널 위해 춤을 추겠다는 마음을 "LATATA"라는 추임새로 표현한 가사와 레게 스타일의 경쾌하고 열정적인 비트가 잘 어우러졌다. 뮤직비디오에서도 아프리칸 느낌의 아트웍에 빈티지한 옐로우톤과 네온 빛 조명들의 믹스 매치로 인디언의 현대적인 느낌으로 살려냈다. 블라인드 테스트를 통해 압도적인 득표수로 선정된 타이틀곡 "LATATA"는 리더 '전소연'이 작사 작곡에 참여한 곡이다. 랩, 춤, 노래뿐만 아니라 데뷔 앨범에 이례적으로 자작곡을 수록하며 뛰어난 작곡 실력까지 뽐냈다.<br><br> 
+                    
+                    두 번째 트랙 "달라($$$)"는 남다른 매력을 숨기지 않고 보여주겠다는 당당한 애티튜드를 나타내는 곡이다. 세 번째 트랙 "MAZE"에서 아이들은 혼란스러운 사랑의 마음을 다이내믹한 기타 리프와 신스 패턴, 몽환적인 비트로 풀어냈다. 네 번째 트랙 "DON"T TEXT ME"는 떠난 상대의 연락도 감정도 단호하게 쳐내는 트렌디한 Chill trap 장르의 곡이다. 다섯 번째 트랙 "알고 싶어"는 중독성 있는 멜로디가 포인트로, 사랑에 빠진 소녀의 마음을 귀여운 가사로 담았다. 전체적인 앨범의 감정선은 마지막 트랙인 "들어줘요"에서 잔잔하고도 임팩트 있게 마무리된다.<br><br>
+                    
+                    뭄바톤부터 발라드까지, 장르의 스펙트럼을 넘나들며 신인그룹에게서 찾아보기 힘든 완성도 높은 미니앨범 [I am]은 '(여자)아이들'의 무궁무진한 성장 가능성과 앞으로의 방향성을 기대해 볼 수 있다. 2018년 가요계를 뒤흔들 '(여자)아이들'을 주목해보자. 각자의 매력이 하나로 뭉쳐 그 누구도 쉽게 따라 할 수 없는 아이들만의 개성 있고 재미있는 아이덴티티를 정립하는 여정이 기대된다.<br><br>   
+                    
+                    "미니 앨범 1집 I am은 앨범명과 같이  '나'라는 '아이'를 표현하며, 6명의 각기 다른 매력을 가진 팀 '아이들'의 색깔을 보여주는 첫 번째 앨범입니다!
+                    타이틀곡 "LATATA"는 리더 '소연'이가 한 파트 한 파트 멤버들을 생각하면서 만든 곡으로 개성 강한 여섯 멤버를 가장 잘 표현한 곡입니다! 열심히 준비한 앨범이니까 저희만의 유니크한 색깔을 많이 좋아해 주셨으면 좋겠습니다!"<br><br> 
+                    
+                    <b>Comment by ‘(여자)아이들’</b>
+                    </p><hr> 
+                    
+                    <h3 style="padding: 0 10px 0 10px">Track List</h3>
+                    <p style="padding: 18px">
+                        <b>01. LATATA</b><br> 
+                        <b>Composed by 소연, 빅싼초(Yummy Tone)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 소연</b><br><br>  
+
+                        아이들의 타이틀곡 "LATATA"는 차분하지만 열정적인 비트와 중독성 강한 후렴구가 인상적인 Moombahton 장르의 곡으로, Pluck 사운드와 멤버들의 목소리를 샘플링한 테마가 곡의 감상 포인트. 아이들 각자의 매력을 마음껏 보여줄 수 있는 곡이다. 사랑에 빠져 이 밤을 불태우도록 신나게 춤추고 싶은 마음을 'LATATA'라는 의성어로 표현한 재치가 돋보인다.
+                    </p>
+                    <p style="padding: 18px">
+                        <b>02. 달라($$$)</b><br> 
+                        <b>Composed by 윤종성(MonoTree), Le'mon(153/Joombas)</b><br>  
+                        <b>Lyrics by Le'mon(153/Joombas), 소연</b><br>  
+                        <b>Arranged by 윤종성(MonoTree)</b><br><br>  
+
+                        808 베이스와 통통 튀는 리듬, 전소연의 래핑이 돋보이는 힙합 곡으로 "나는 남달라"라는 메시지를 달러($)의 라임 배치로 재치 있게 풀어내었다. 각자의 파트에서 아이들의 독특하고 매력 있는 음색 톤을 가까이서 느낄 수 있는 곡이다.
+                    </p>
+                    <p style="padding: 18px">
+                        <b>03. MAZE</b><br> 
+                        <b>Composed by 손영진(MosPick), Ferdy(MosPick)</b><br>  
+                        <b>Lyrics by 손영진(MosPick), Ferdy(MosPick), 소연</b><br>  
+                        <b>Arranged by 손영진(MosPick), Ferdy(MosPick)</b><br><br>  
+
+                        귀를 사로잡는 그루비한 기타 리프와 변조하는 신스 패턴, 트렌디한 비트 위에 매혹적인 아이들의 목소리가 얹혀 몽환적인 느낌의 댄스 곡이 탄생했다. 사랑에 빠져 어쩔 줄 모르는 마음을 마치 미로에 갇힌 심정에 빗댄 표현이 인상 깊다.
+                    </p>  
+                    <p style="padding: 18px">
+                        <b>04. DON"T TEXT ME</b><br> 
+                        <b>Composed by 빅싼초(Yummy Tone), 박해일(Yummy Tone), 재리포터(Yummy Tone)</b><br>  
+                        <b>Lyrics by 빅싼초(Yummy Tone), 박해일(Yummy Tone), 재리포터(Yummy Tone), 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 박해일(Yummy Tone)</b><br><br>  
+
+                        Chill trap 장르의 "DON"T TEXT ME"는 808 베이스와 Pluck 사운드가 돋보이는 곡으로, 잊고 있던 상대에게 뜬금없이 도착한 메시지로부터 떠오른 생각에 잠 못 이루는 감정을 솔직한 노랫말로 표현했다. 연락도 감정도 단호하게 쳐내는 한층 성숙하고 성장한 모습을 엿볼 수 있다.
+                    </p>  
+                    <p style="padding: 18px">
+                        <b>5. 알고 싶어</b><br> 
+                        <b>Composed by ARIN, VINCENZO, Fuxxy, Any Masingga</b><br> 
+                        <b>Lyrics by ARIN, VINCENZO, Fuxxy, Any Masingga, 소연</b><br>  
+                        <b>Arranged by VINCENZO, Any Masingga</b><br><br>
+
+                        "What"s in your house?" 사람의 심장 박동과 가장 가깝다고 일컫는 하우스 리듬을 차용, 당돌한 질문으로 시작되는 딥하우스 장르의 수록곡 "알고 싶어"는 소울 요소가 가미되어 곡의 매력을 배가시켰다. 특히 전주의 Rhodes EP 사운드는 마치 첫눈에 사랑에 빠진 마음처럼 단번에 귀를 사로잡는다.
+                    </p> 
+                    <p style="padding: 18px">
+                        <b>6. 들어줘요</b><br> 
+                        <b>Composed by 손영진(MosPick)</b><br> 
+                        <b>Lyrics by 손영진(MosPick), 노경민</b><br>  
+                        <b>Arranged by 손영진(MosPick)</b><br><br>
+
+                        이별의 아픔을 솔직하게 담은 가사와, 서정적인 피아노 선율과 다이내믹한 스트링 사운드가 어우러져 슬프지만 덤덤한 분위기를 이끌어낸다. 랩 포지션의 멤버들도 보컬적 역량을 이끌어내는 곡이다.
+                    </p>  
+                </div>
+            </div>
+           </div>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+    </div>
+      
+    </div>
+    
+    <div class="row2"> 
+      <div class="column">
+        <button type="button" class="btn" id="1" data-toggle="modal" data-target="#myModal6" style="padding: 0"><a href="#myModal6"><img src="album/latata_usa.jfif" style="width:100%"></a></button>
+      </div> 
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal6" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content" style="text-align: justify">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">앨범 정보</h3>
+        </div>
+        <div class="modal-body">
+           <div class="container-fluid">
+               <div class="w3-row" style="margin: 0;">
+                <div class="w3-col w3-container s4 m4 l4"><img src="album/latata_usa.jfif" style="width: 90%"></div>
+                <div class="w3-col w3-container s8 m8 l8"><br>
+                   <h3 style="margin-top: 0px">LATATA (English Ver.)</h3>
+                   <h4>(여자) 아이들</h4>
+                   <p>2020.05.15 &#8226; POP</p>
+                </div>
+               </div>
+                    
+                <div class="w3-row" style="border: 1px solid black; border-radius: 10px; margin-top: 15px">
+                    <p style="padding: 18px">
+                    <b>글로벌 히트곡 ‘LATATA (English Ver.)’ 발매<br> 
+                    북미시장 진출에 이어 글로벌 그룹으로 자리매김하기 위한 (여자)아이들의 도약</b><br><br>  
+                    
+                    2018년 5월, 뛰어난 외모와 신인이라고는 믿기지 않을 만큼의 놀라운 실력으로 데뷔한 (여자)아이들이 2개월 만에 이뤄낸 성적이다. 전 세계를 들썩이며 글로벌 특급 신인으로 인정받은 (여자)아이들은 디지털 싱글 ‘한(一)’을 발매하며 거침없는 질주를 이어간다.<br><br> 
+                    
+                    전작 ‘LATATA’에서 이어지는 뭄바톤(Moombathon) 소스에 하우스 장르를 기반으로 만들어진 노래 '한(一)’은 멤버 소연의 자작곡으로 배신과 이별, 그리고 혼자 남겨진 감정을 ‘한’이라는 중의적인 소재로 표현한 곡이다.아이돌 신인그룹으로서는 이례적으로 데뷔 앨범의 타이틀곡을 멤버의 자작곡으로 내세우며, 그 실력을 인정받은 멤버 소연이 이번 디지털 싱글에서 또다시 작곡가로 나섰다.<br><br>
+                    
+                    매 앨범마다 색다른 모습을 추구하며 다양한 매력을 선사한 (여자)아이들은 지난 4월 세 번째 미니앨범 [I trust]를 발매함과 동시에 미국의 리퍼블릭 레코드와 파트너십을 맺고 미국 진출을 본격화함을 알렸다. 셀프 프로듀싱을 하며 당당하게 자신들만의 음악을 만들어가고 있는 (여자)아이들의 새로운 도약이 기대되며, 글로벌 영향력과 포텐셜을 보여주려 하는 올 2020년은 (여자)아이들의 가장 크고 대담한 해가 될 것으로 예상된다.
+                    </p><hr> 
+                    
+                    <h3 style="padding: 0 10px 0 10px">Credit</h3>
+                    <p style="padding: 18px">
+                        <b>Composed by 소연, 빅싼초(Yummy Tone)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 소연</b><br>
+                        <b>English Lyrics by Lauren Kaori</b><br><br>
+                        
+                        <b>Chorus 전재희</b><br>  
+                        <b>Synthesizer 빅싼초(Yummy Tone)</b><br>
+                        
+                        <b>Recording engineer 전부연 @ Cube Studio</b><br>  
+                        <b>Mixing engineer 조씨아저씨 @ Cube Studio</b><br>  
+                        <b>Mastering engineer 권남우 @ 821 Sound Mastering</b><br><br>
+                    </p>
+                </div>
+            </div>
+           </div>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+    </div>   
+      
+      <div class="column">
+        <button type="button" class="btn" id="1" data-toggle="modal" data-target="#myModal7" style="padding: 0"><a href="#myModal7"><img src="album/latata_japan.jfif" style="width:100%"></a></button>
+      </div>
+          
+<!-- Modal -->
+  <div class="modal fade" id="myModal7" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content" style="text-align: justify">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">앨범 정보</h3>
+        </div>
+        <div class="modal-body">
+           <div class="container-fluid">
+               <div class="w3-row" style="margin: 0;">
+                <div class="w3-col w3-container s4 m4 l4"><img src="album/latata_japan.jfif" style="width: 90%"></div>
+                <div class="w3-col w3-container s8 m8 l8"><br>
+                   <h3 style="margin-top: 0px">LATATA</h3>
+                   <h4>(여자) 아이들</h4>
+                   <p>2019.07.31 &#8226; J-POP</p>
+                </div>
+               </div>
+                    
+                <div class="w3-row" style="border: 1px solid black; border-radius: 10px; margin-top: 15px">
+                    <p style="padding: 18px">
+                    <b>'(여자)아이들' 일본 공식 데뷔</b><br><br> 
+                                         
+                    2018년을 가장 뜨겁게 불태운 큐브의 신예 걸그룹 '(여자)아이들'<br> 
+                    강렬함과 화려함으로 눈과 귀를 사로잡을 "LATATA"<br> 
+                    '(여자)아이들' 일본 공식 데뷔 앨범 [LATATA]
+                    </p><hr> 
+                    
+                    <h3 style="padding: 0 10px 0 10px">Track List</h3>
+                    <p style="padding: 18px">
+                        <b>01. LATATA (Japanese ver.)</b><br> 
+                        <b>Composed by 소연, 빅싼초(Yummy Tone)</b><br>  
+                        <b>Lyrics by 소연</b><br>  
+                        <b>Arranged by 빅싼초(Yummy Tone), 소연</b><br><br>  
+
+                        아이들의 타이틀곡 "LATATA"는 차분하지만 열정적인 비트와 중독성 강한 후렴구가 인상적인 Moombahton 장르의 곡으로, Pluck 사운드와 멤버들의 목소리를 샘플링한 테마가 곡의 감상 포인트. 아이들 각자의 매력을 마음껏 보여줄 수 있는 곡이다. 사랑에 빠져 이 밤을 불태우도록 신나게 춤추고 싶은 마음을 'LATATA'라는 의성어로 표현한 재치가 돋보인다.
+                    </p>
+                    <p style="padding: 18px">
+                        <b>02. Light My Fire</b><br> 
+                        <b>Composed by Hjalmar Wilen, Malin Johansson, Birk Storm</b><br>  
+                        <b>Lyrics by Yu Shimoji</b><br>  
+                        <b>Arranged by Hjalmar Wilen</b><br><br>
+                    </p>
+                    <p style="padding: 18px">
+                        <b>03. MAZE(Japanese ver.)</b><br> 
+                        <b>Composed by 손영진(MosPick), Ferdy(MosPick)</b><br>  
+                        <b>Lyrics by 손영진(MosPick), Ferdy(MosPick), 소연</b><br>  
+                        <b>Arranged by 손영진(MosPick), Ferdy(MosPick)</b><br><br>  
+
+                        귀를 사로잡는 그루비한 기타 리프와 변조하는 신스 패턴, 트렌디한 비트 위에 매혹적인 아이들의 목소리가 얹혀 몽환적인 느낌의 댄스 곡이 탄생했다. 사랑에 빠져 어쩔 줄 모르는 마음을 마치 미로에 갇힌 심정에 빗댄 표현이 인상 깊다.
+                    </p>  
+                    <p style="padding: 18px">
+                        <b>04. For You</b><br> 
+                        <b>Composed by 민니, 후디니(Houdini)</b><br>  
+                        <b>Lyrics by 민니, 후디니(Houdini), 소연, Eri Osanai</b><br>  
+                        <b>Arranged by 후디니(Houdini), 민니</b><br><br>  
+                    </p>  
+                </div>
+            </div>
+           </div>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+    </div>
+      
+       <div class="column">
+        <button type="button" class="btn" id="1" data-toggle="modal" data-target="#myModal8" style="padding: 0"><a href="#myModal8"><img src="album/jelly.jpg" style="width:100%"></a></button>
+      </div>
+      
+<!-- Modal -->
+  <div class="modal fade" id="myModal8" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content" style="text-align: justify">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">앨범 정보</h3>
+        </div>
+        <div class="modal-body">
+           <div class="container-fluid">
+               <div class="w3-row" style="margin: 0;">
+                <div class="w3-col w3-container s4 m4 l4"><img src="album/jelly.jpg" style="width: 90%"></div>
+                <div class="w3-col w3-container s8 m8 l8"><br>
+                   <h3 style="margin-top: 0px">Jelly</h3>
+                   <h4>(여자) 아이들</h4>
+                   <p>2017.11.05 &#8226; 랩/힙합</p>
+                </div>
+               </div>
+                    
+                <div class="w3-row" style="border: 1px solid black; border-radius: 10px; margin-top: 15px">
+                    <p style="padding: 18px">
+                    <b>언프리티 랩 스타의 실력파 래퍼 '전소연' 데뷔 싱글!<br> 
+                    통통 튀는 매력이 가득한 힙합 자작곡 "Jelly"</b><br><br>  
+                    
+                    '언프리티 랩 스타 3', '프로듀스 101'에 출연하며 뛰어난 랩 실력과 개성 있는 매력으로 무한한 가능성을 보여준 '전소연'이 솔로로 전격 데뷔한다. '언프리티 랩 스타 3' 출연 당시 유일한 데뷔 미경력자임에도 불구하고 파워 래핑과 카리스마 넘치는 무대로 제대로 된 실력을 보여주며 세미파이널까지 진출했던 전소연이기에 이번 데뷔는 더욱 기대감이 높다.<br><br> 
+                    
+                    데뷔 첫 솔로 곡이자 '전소연'의 자작곡인 "Jelly"는 어린이 프로그램 '춤추는 젤라비'를 떠올리며 만든 곡으로 마치 젤리 위에 있는 듯, 정신이 아득해질 정도로 행복한 기분을 표현했다. 워너원 'Never', '에너제틱', 펜타곤 'Like This' 등에 참여한 프로듀서 듀오 Flow Blow와 전소연이 함께 작업한 자작곡으로, 몽환적이면서 통통 튀는 분위기가 전소연만의 독특한 컬러를 보여준다. 또한, 뮤직비디오에는 같은 큐브 소속 선후배 아티스트인 펜타곤 이던과 우석, 라이관린, 조우찬 등이 함께 출연하여 재미있는 장면들을 연출해냈다.<br><br>
+                    
+                    이번 데뷔 싱글 [Jelly] 발매와 함께 본격적인 활동을 예고한 전소연. 현아의 뒤를 잇는 큐브의 솔로 여가수 전소연의 앞으로의 행보가 기대된다.
+                    </p><hr> 
+                    
+                    <h3 style="padding: 0 10px 0 10px">Credit</h3>
+                    <p style="padding: 18px">
+                        <b>Composed by Flow Blow, 전소연</b><br>  
+                        <b>Lyrics by 전소연</b><br>  
+                        <b>Arranged by Flow Blow, 전소연</b><br><br>
+                        
+                        <b>Guitar 이창우</b><br>  
+                        <b>Piano Flow Blow </b><br>
+                        <b>Synthesizer Flow Blow</b><br><br>
+                        
+                        <b>Recording engineer 전부연 @ Cube Studio</b><br>  
+                        <b>Mixing engineer 신재빈 @ Cube Studio</b><br>  
+                        <b>Mastering engineer 권남우 @ 821 Sound Mastering</b><br><br>
+                    </p>
+                </div>
+            </div>
+           </div>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+    </div> 
+      
+       <div class="column">
+        <button type="button" class="btn" id="1" data-toggle="modal" data-target="#myModal9" style="padding: 0"><a href="#myModal9"><img src="album/idlesong.jpg" style="width:100%"></a></button>
+      </div>
+  
+ <!-- Modal -->
+  <div class="modal fade" id="myModal9" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <!-- Modal content-->
+      <div class="modal-content" style="text-align: justify">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">앨범 정보</h3>
+        </div>
+        <div class="modal-body">
+           <div class="container-fluid">
+               <div class="w3-row" style="margin: 0;">
+                <div class="w3-col w3-container s4 m4 l4"><img src="album/idlesong.jpg" style="width: 90%"></div>
+                <div class="w3-col w3-container s8 m8 l8"><br>
+                   <h3 style="margin-top: 0px">아이들 쏭</h3>
+                   <h4>(여자) 아이들</h4>
+                   <p>2018.02.28 &#8226; 랩/힙합</p>
+                </div>
+               </div>
+                    
+                <div class="w3-row" style="border: 1px solid black; border-radius: 10px; margin-top: 15px">
+                    <p style="padding: 18px">
+                    <b>'전소연' [아이들 쏭 (Idle song)]</b><br><br>  
+
+                    `아이들 쏭 (Idle song)`은 우리말로 `게으른 노래`라는 뜻으로 사랑에 권태로운 연인에 대한 이야기를 ‘아이들 쏭’ 이라는 타이틀로 재치 있게 풀어내었다. 
+                    </p><hr> 
+                    
+                    <h3 style="padding: 0 10px 0 10px">Credit</h3>
+                    <p style="padding: 18px">
+                        <b>Composed by 전소연, Flow blow</b><br>  
+                        <b>Lyrics by 전소연</b><br>  
+                        <b>Arranged by 전소연, Flow blow</b><br><br>
+                        
+                        <b>Guitar 이창우</b><br> 
+                        <b>Piano Flow blow</b><br> 
+                        <b>Drum Flow blow</b><br> 
+                        <b>Bass Flow blow</b><br>  
+                        <b>Synthesizer Flow blow</b><br><br>
+                        
+                        <b>Recording engineer 신재빈, 전부연 @ Cube Studio</b><br>  
+                        <b>Mixing engineer 신재빈 @ Cube Studio</b><br>  
+                        <b>Mastering engineer 권남우 @ 821 Sound Mastering</b><br><br>
+                    </p>
+                </div>
+            </div>
+           </div>
+           <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+      </div>
+    </div> 
+      
+    </div><hr>
+</div>
+
+  
+<div class="container text-center" id="video">
+   <h4>VIDEO</h4>
+    <!-- Video Grid -->
+    <div class="w3-row" style="margin-top: 22px"> 
+      <div class="w3-col w3-container s12 m12 l4">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/om3n2ni8luE"></iframe>
+        <p>[MV] Oh My God</p>
+      </div>
+      <div class="w3-col w3-container s12 m6 l4">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/6oanIo_2Z4Q"></iframe>
+        <p>[MV] Lion</p>
+      </div>  
+      <div class="w3-col w3-container s12 m6 l4">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/I66oFXdf0KU"></iframe>
+        <p>[MV] Uh-Oh</p>
+      </div>
+    </div>
+    
+    <div class="row2">
+     <div class="w3-col w3-container s12 m6 l3">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/2cevbhEqQF4"></iframe>
+        <p>[MV] Senorita</p>
+      </div> 
+      <div class="w3-col w3-container s12 m6 l3">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/OKNXn2qCEws"></iframe>
+        <p>[MV] 한(-)</p>
+      </div>  
+      <div class="w3-col w3-container s12 m6 l3">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/p4RIhcY7V3c"></iframe>
+        <p>[MV] LATATA</p>
+      </div>
+       <div class="w3-col w3-container s12 m6 l3">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ypNJMDlJvY4"></iframe>
+        <p>[MV] LATATA(Japanese ver.)</p>
+      </div>
+    </div>
+</div>
+
+
+<!-- 푸터--> 
+<footer class="container-fluid text-center">
+<div class="sns_menu">
+    <a href="https://www.facebook.com/G.I.DLE.CUBE" title="페이스북" target="_blank"><img src="facebook.png"></a>
+    <a href="https://www.instagram.com/official_g_i_dle/" title="인스타그램"  target="_blank"><img src="instagram.png"></a>
+    <a href="https://twitter.com/G_I_DLE" title="트위터" target="_blank"><img src="twitter.png"></a>
+    <a href="https://www.youtube.com/gidleofficial" title="유튜브" target="_blank"><img src="youtube.png"></a>
+</div>
+ <p>서울시 성동구 아차산로 83길 F2빌딩 CUBE ENTERTAINMENT  |  전화 02-3445-1045</p>
+  <p>COPYRIGHT &copy;2018 CUBE ENTERTAINMENT CO. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+<script>
+//modal
+$(document).ready(function(){
+  $("#mybtn1").click(function(){
+    $("#myModal1").modal({backdrop: "static"});
+  });
+});    
+
+$(document).ready(function(){
+  $("#mybtn2").click(function(){
+    $("#myModal2").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn3").click(function(){
+    $("#myModal3").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn4").click(function(){
+    $("#myModal4").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn5").click(function(){
+    $("#myModal5").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn6").click(function(){
+    $("#myModal6").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn7").click(function(){
+    $("#myModal7").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn8").click(function(){
+    $("#myModal8").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn9").click(function(){
+    $("#myModal9").modal({backdrop: "static"});
+  });
+});
+    
+    
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+    var x = document.getElementsByClassName("navbar");
+    x[0].style.top = "0"; //맨 위에서 20px 스크롤 다운하면 navbar가 내려옴 
+    
+  } 
+  else {
+    mybutton.style.display = "none";
+    var x =document.getElementsByClassName("navbar");
+    x[0].style.top = "-60px";
+     
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

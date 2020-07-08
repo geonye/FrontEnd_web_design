@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>(G)I-DLE/INTRODUCTION</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+         
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JQuery 최신버전-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    
+    <style>
+     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+SC:wght@900&family=Permanent+Marker&family=Raleway:wght@500;600&display=swap');
+        
+    body {
+       font-family: 'Raleway', sans-serif;
+       font-weight: 600;  
+       font-size: 1.5em; 
+    } 
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;    
+    }
+    .navbar-custom {
+        background-color: black;
+    }
+    .navbar-brand {
+        padding: 0 50px 0 30px;
+    }       
+    .navbar-brand img {
+        overflow: hidden;
+        position: relative;
+        height: 50px;
+        width: 67px;
+    }
+     #myNavbar a:hover {
+        background: #E11900; 
+    } 
+    #myNavbar a:active {
+        background: #E11900; 
+    }  
+    .sns_menu1 img {
+        width: 35px; 
+        margin: 80px 10px 60px 10px;
+        padding: 6px 6px 6px 6px;
+        background-color: #feceab;
+        border-radius: 30%;
+      }   
+        
+    .bg {
+      /* The image used */
+      background-image: url("jacket/gidle_senorita.jpg");
+      background-attachment: fixed;
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 50%;
+    }  
+    .bg-cover{
+       position: absolute;
+       height: 50%;
+       width: 100%;
+       background-color: rgba(0, 0, 0, 0.5);   
+       z-index:1;
+    }
+    .bg .content{
+     position: absolute;
+     top:38%;
+     left:50%;
+     transform: translate(-50%, -50%);
+     font-size:1.5rem;
+     color: white;
+     z-index: 2;
+     text-align: center;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      width: 45px;
+      height: 45px;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 13px;
+      border: 2px solid white;
+      outline: none;
+      background-color: #feceab;
+      color: white;
+      cursor: pointer;
+      padding: 7px;
+      border-radius: 50%;
+    }
+    #myBtn:hover {
+      background-color: black;
+      border: 2px solid black;
+    }    
+        
+    /*상단바 버튼*/
+    .btn-group button { 
+      display: block;
+      background-color: inherit;
+      color: white;
+      padding: 22px 16px;
+      width: inherit;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    .btn-group button:hover {
+      background-color: #A7A8A9;
+    }
+    .gidle h1 {
+        font-size: 5em;
+        font-family: 'Permanent Marker', cursive;
+        margin: 0 0 40px 0
+    }
+    .container2 {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+   
+    hr {
+        border: 0;
+        height: 2px;
+        background-color: #EAE6DA;
+    }
+    .shout {
+        text-align: center;
+        border: 3px dashed #feceab; padding: 10px 0 10px 0px; 
+        width: 40%;
+        font-size: 20px;
+        
+    }
+    .bg2 {
+      /* The image used */
+      background-image: url("marble2.jfif");
+      background-attachment: fixed;
+      background-position:bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 50%;
+    } 
+    .img-cover{
+       position: ;
+       height: 30%;
+       width: 30%;
+       background-color: rgba(0, 0, 0, 0.5);              
+       z-index:1;
+    }    
+          
+    @media screen and (min-width: 1121px) {
+      .text-block {
+        font-size: 2vh;
+      }
+      .text-block img {
+            width: 15%;
+      } 
+    }   
+    @media screen and (max-width: 1120px) {
+      .text-block {
+        font-size: 1.5vh;
+      }
+      .text-block img {
+            width: 10%;
+      }
+    }    
+    @media screen and (max-width: 800px) {
+      .text-block {
+        font-size: 1.5vh;
+      }
+      .text-block img {
+            width: 15%;
+      }
+    }
+
+    .panton {
+        border: 1px solid;
+        border-radius: 25px;
+        background-image: linear-gradient(-90deg, #7e00bf, #e11900);
+        color: white;
+    } 
+    
+    .text-block {
+      position: absolute;;    
+      top: 50%;
+      left: 50%;
+      transform: translate( -50%, -50% );
+      width: 60%;
+      height: 70%;
+      background: rgba(255, 255, 255, 0.6); 
+      color: black;
+      padding-left: 3%;
+      padding-right: 3%;
+      overflow: hidden;  
+    } 
+    .text-block p {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+    }    
+        
+    .container-fluid {
+      position: relative;
+      font-family: Arial;
+    }    
+        
+    footer {
+      padding: 25px;
+      background-color: #feceab;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;    
+    }
+    .sns_menu2 img {
+        width: 30px; 
+        background-color: #feceab;
+        margin: 5px 10px 10px 5px;
+        padding: 5px 5px 5px 5px;
+        
+    }
+    </style>
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-custom navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href=".\idle.html"><img src="logo_1.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=".\idle.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">(G)I-DLE<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href=".\introduction.html">INTRODUCTION</a></li>
+            <li><a href=".\member.html">MEMBER</a></li>
+          </ul>
+        </li>
+        <li><a href=".\history.html">HISTORY</a></li>
+        <li><a href=".\music.html">MUSIC</a></li>
+        <li><a href=".\gallery.html">GALLERY</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="bg">
+  <div class="content">
+      <h1>(여자)아이들</h1>
+  </div>
+  <div class="bg-cover"></div>
+</div>
+
+<!-- Main Content -->
+<div class="container text-center">
+    <div class="sns_menu1">
+        <a href="https://www.facebook.com/G.I.DLE.CUBE" title="페이스북" target="_blank"><img src="facebook.png"></a>
+        <a href="https://www.instagram.com/official_g_i_dle/" title="인스타그램"  target="_blank"><img src="instagram.png"></a>
+        <a href="https://twitter.com/G_I_DLE" title="트위터" target="_blank"><img src="twitter.png"></a>
+        <a href="https://www.youtube.com/gidleofficial" title="유튜브" target="_blank"><img src="youtube.png"></a>
+    </div>
+    
+    <div class="gidle" style="margin-bottom: 10px;">
+        <h1><b>(G)&nbsp;I - D&nbsp;L&nbsp;E</b></h1>
+        <P style="font-size: 23px; font-family: MD개성체, sans-serif; margin-bottom: 0px;">“ 개인을 뜻하는 ‘아이’와 복수를 뜻하는 ‘들’의 합성어 ”</P>
+        <P style="font-size: 20px;font-family: HY엽서M, sans-serif; margin-bottom: 20px;">개성 많은 멤버들이 모였다는 뜻을 가지고 있다.
+        </P>
+    </div>
+    <div class="container2">   
+        <img src="jacket/all4.jpg" style="width: 80%">
+        <hr style="margin-top: 50px">
+    </div>
+</div>
+<div class="container text-center">
+    <p class="shout" style="font-family: MD개성체;"><b>아이~! 안녕하세요, 아이들입니다!</b>
+    </p>
+    <p style="text-align: left; margin:30px 0 50px 0; font-size: 16px;">
+        2018년 5월 2일에 데뷔한 큐브엔터테인먼트 소속의 다국적 6인조 걸그룹.<br><br>
+
+        CLC의 직계 후배격인 걸그룹으로 큐브엔터테인먼트는 CLC를 데뷔시킨 지 3년만에 (여자)아이들을 데뷔시켰다.<br><br>
+
+        팀명인 (여자)아이들은 각각의 개인을 ‘아이(I)’로 놓고 여기에 우리말로 복수를 의미하는 ‘들’을 붙여 ‘여섯 명의 개성이 모인 팀’이라는 의미로, 문자로 표기할 때는 (여자)아이들이라고 쓰지만, 읽을 때는 괄호안의 여자는 읽지않고 아이들이라고만 읽는다.<br><br>
+
+        데뷔 초부터 흔치않은 컨셉으로 인기몰이를 하며 데뷔 후 활동 20일 만에 음악 방송 1위, 음원 차트 상위권, 신인상 7관왕을 차지하였고 멤버들이 참여하고 전 세계적으로 화제가 되었던 콜라보 음원 K/DA - &lt;POP/STARS&gt; 등을 통해 탄탄한 해외 팬덤을 가지고 있다. 또한 컴백전쟁: 퀸덤에서 보여준 막내 걸그룹 답지 않은 존재감과 무대 퍼포먼스를 기점으로 국내 팬덤 규모 또한 크게 성장하게 되면서 대세 걸그룹 중 한 팀으로 자리잡았다.<br>
+    </p><hr>
+    
+<div class="container-fluid text-center" style="border: 2px solid #7e00bf; width: 100%">
+    <h1 style="font-family: 'HY엽서M'"><b>네버랜드(Neverland)</b></h1>
+        <p style="text-align: center; margin:30px 0 30px 0; font-size: 16px; font-family: 'Noto Sans KR', sans-serif; 
+       font-weight: 400;">
+        피터팬 속 상상의 공간 네버랜드.<br>
+        네버랜드에 사는 사람들은 변하지 않고 영원히 아이로 살 수 있다.<br><br>
+        아티스트는 팬들 속에서 함께 살아가듯이 (여자)아이들도 네버랜드 속에서 영원히 (여자)아이들로 살며 팬들과 함계 변하지 않고 오래오래 함께하자는 의미
+        </p>  
+</div>
+
+<div class="container text-center" style="width: 100%">
+    <p style="text-align: left; margin:30px 0 30px 0;  font-size: 16px;">
+    네버랜드는 2018년 데뷔한 대한민국의 6인조 걸그룹 (여자)아이들의 팬덤이다.<br><br>
+    다음 공식 팬카페에서 2018년 10월 4일부터 10월 10일까지 진행되었던 팬클럽 이름 공모에서 뽑힌 이름으로, 10월 29일 발표되었다.<br><br>
+    피터팬 속 상상의 공간 네버랜드에 사는 사람들은 변하지 않고 영원히 아이로 살 수 있는데, 아티스트는 팬들 속에서 함께 살아가듯이 (여자)아이들도 네버랜드 속에서 영원히 (여자)아이들로 살며 팬들과 함께 변하지 않고 오래오래 함께하자는 의미를 지니고 있다.
+    </p>  
+</div>
+</div>
+<div class="container-fluid text-center" style="width: 90%; height: 800px; overflow: hidden; margin-bottom: 200px">
+    <img src="marble5.png" style="position: bottom;">
+    <div class="text-block">
+       <div class="row">
+           <div class="column" style="display: inline-block; margin-top: 7%; padding: 0px 10px 30px 10px">
+              <p style="color: #e11900"><b>네온 레드<br>(NEON RED)</b></p>
+              <p class="panton">Panton 185C</p>
+              <p style="color: darkgray">Process: C1 15/M100/Y92 62/K0 07<br> RGB Web: R235/B41<br> Web Hex: e11900</p>   
+           </div>
+           <div class="column" style="display: inline-block; padding: 0px 10px 0px 0px">
+              <p style="color: #7e00bf"><b>시크 바이올렛<br>(CHIC VIOLET)</b></p>
+              <p class="panton">Panton 2597C</p>  
+              <p style="color: darkgray">Process: C78/M100/Y6 69/K2 56<br> RGB Web: R94/G13/B139<br> Web Hex: 7e00bf</p>   
+           </div>
+       </div>
+        
+        <hr><p>
+            (여자)아이들의 음악적 열정과 에너지를 상징하는 네온 레드<br>
+            아이들과 영원히 함계할 수 있는 신비로운 상상속 공간<br>
+            네버랜드를 상징하는 시크 바이올렛
+        </p><hr>
+        <p>
+            <img src="neverland.png" >
+        </p>
+    </div>
+    <div class="img-cover"></div>
+</div>
+
+<!-- 푸터--> 
+<footer class="container-fluid text-center">
+<div class="sns_menu2">
+    <a href="https://www.facebook.com/G.I.DLE.CUBE" title="페이스북" target="_blank"><img src="facebook.png"></a>
+    <a href="https://www.instagram.com/official_g_i_dle/" title="인스타그램"  target="_blank"><img src="instagram.png"></a>
+    <a href="https://twitter.com/G_I_DLE" title="트위터" target="_blank"><img src="twitter.png"></a>
+    <a href="https://www.youtube.com/gidleofficial" title="유튜브" target="_blank"><img src="youtube.png"></a>
+</div>
+ <p>서울시 성동구 아차산로 83길 F2빌딩 CUBE ENTERTAINMENT  |  전화 02-3445-1045</p>
+  <p>COPYRIGHT &copy;2018 CUBE ENTERTAINMENT CO. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>    
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+    var x = document.getElementsByClassName("navbar");
+    x[0].style.top = "0"; //맨 위에서 20px 스크롤 다운하면 navbar가 내려옴 
+    
+  } 
+  else {
+    mybutton.style.display = "none";
+    var x =document.getElementsByClassName("navbar");
+    x[0].style.top = "-60px";
+     
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

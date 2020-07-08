@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>(G)I-DLE/MEMBER</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <!--JQuery 최신버전-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+SC:wght@900&family=Permanent+Marker&family=Raleway:wght@500;600&display=swap');
+        
+    body {
+       font-family: 'Raleway', sans-serif;
+       font-weight: 600;   
+       font-size: 1.5em;
+    }    
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0; 
+    }
+    .navbar-custom {
+        background-color: black;
+    }
+    .navbar-brand {
+        padding: 0 50px 0 30px;
+    }       
+    .navbar-brand img {
+        overflow: hidden;
+        position: relative;
+        height: 50px;
+        width: 67px;
+    } 
+     #myNavbar a:hover {
+        background: #E11900; 
+    } 
+    #myNavbar a:active {
+        background: #E11900; 
+    }      
+        
+    #menu a {
+      color: white;  
+      padding-left: 20px;
+    } 
+    .bg {
+      /* The image used */
+      background-image: url("jacket/gidle_senorita.jpg");
+      background-attachment: fixed;
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 50%;
+    }  
+    .bg-cover{
+       position: absolute;
+       height: 50%;
+       width: 100%;
+       background-color: rgba(0, 0, 0, 0.5);   
+       z-index:1;
+    }
+    .bg .content-bg{
+     position: absolute;
+     top:38%;
+     left:50%;
+     transform: translate(-50%, -50%);
+     font-size:1.5rem;
+     color: white;
+     z-index: 2;
+     text-align: center;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      width: 45px;
+      height: 45px;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 13px;
+      border: 2px solid white;
+      outline: none;
+      background-color: #feceab;
+      color: white;
+      cursor: pointer;
+      padding: 7px;
+      border-radius: 50%;
+    }
+    #myBtn:hover {
+      background-color: black;
+      border: 2px solid black;
+    }    
+        
+    /*상단바 버튼*/
+    .btn-group button { 
+      display: block;
+      background-color: inherit;
+      color: white;
+      padding: 22px 16px;
+      width: inherit;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    .btn-group button:hover {
+      background-color: #A7A8A9;
+    }  
+    .bottom-left {
+      position: absolute;
+      bottom: 13px;
+      left: 25px;
+      font-size: 25px; 
+      font-family: 'HY울릉도M';
+    }
+    hr {
+        border: 0;
+        height: 2px;
+        background-color: #EAE6DA;
+    }
+    
+    .img-cover{
+       position: ;
+       height: 30%;
+       width: 30%;
+       background-color: rgba(0, 0, 0, 0.5);               
+       z-index:1;
+    }    
+        
+   .row {  /*flex container*/
+        display: flex;  /* 한 줄로 배치한다 */
+        width: 90%;  /*Jello design*/
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20vh;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+    }     
+     .column {  /*flex item*/
+        flex: 60%;  /*50% 크기를 지정*/
+        padding: 0 5% 5% 5%;
+    }      
+    .column img {
+        margin-bottom: 10%;
+    }    
+    .content {
+        background-color: white;
+        padding: 4px 10px;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+        margin-top: 8px;
+        margin-bottom: 8vh;
+    }       
+    #col1 {
+        position: relative;
+    }
+    #col2 {
+        position: relative;
+        top: 20vh;
+    }    
+         
+    .row .content:hover {
+        border: 1px solid #e11900;
+       
+    }  
+    .column img:hover {
+        opacity: 0.8;
+    }
+    .content:hover {
+        
+        animation: shake 1s;
+        animation-iteration-count: infinite;
+    } 
+        
+    td {
+        padding: 5px 5px 5px 10px;
+    }    
+        
+    a {
+        text-decoration: none;
+        color: #7e00bf;
+    }     
+    iframe {
+        position: relative;
+        left: 10px;
+    }   
+    .container-iframe {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }    
+    .responsive-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }    
+        
+    footer {
+      padding: 25px;
+      background-color: #feceab;
+    }
+    .sns_menu img {
+        width: 30px; 
+        background-color: #feceab;
+        margin: 5px 10px 10px 5px;
+        padding: 5px 5px 5px 5px;
+        
+    }
+           
+    @keyframes shake {
+       0% { transform: translate(1px, 1px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(3deg); }
+      50% { transform: translate(-1px, 2px) rotate(-3deg); }
+      100% { transform: translate(1px, -2px) rotate(0deg); }
+    }
+    .btn {
+        border: none;
+        padding: 0 0 0 0;
+    }     
+ 
+    </style>
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-custom navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href=".\idle.html"><img src="logo_1.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=".\idle.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">(G)I-DLE<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href=".\introduction.html">INTRODUCTION</a></li>
+            <li><a href=".\member.html">MEMBER</a></li>
+          </ul>
+        </li>
+        <li><a href=".\history.html">HISTORY</a></li>
+        <li><a href=".\music.html">MUSIC</a></li>
+        <li><a href=".\gallery.html">GALLERY</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="bg">
+  <div class="content-bg">
+      <h1>MEMBER</h1>
+  </div>
+  <div class="bg-cover"></div>
+</div>
+
+
+<!-- Main Content -->
+<div class="container text-center"style="margin-top: 30px;">
+    <div class="container-fluid">
+       <img src="logo_3.png" style="width: 30vh">
+       <p style="color: black"><b>
+       아이들은 자란다. 아이들은 잘한다.<br> 스스로 프로듀싱하고 스스로 무대를 만드는,<br>매섭도록 맹렬한 (여자)아이들</b>
+       </p>
+    </div>
+    
+    <div class="row">
+        <div class="column" id="col1">
+            <div class="content" >
+              <!-- Trigger the modal with a button -->
+              <button type="button" class="btn" id="mybtn1" data-toggle="modal" data-target="#myModal1" style="padding: 0"><a href="#myModal1"><img class="myImg" src="profile/miyeon_.jpg" style="width: 100%; margin-bottom: 0px"></a></button>
+              <p style="display: inline-block; font-size: 1.1em; padding-top: 10px">조미연 &nbsp;&nbsp;</p>
+              <p style="display: inline-block; font-size: 0.9em">Main Vocal</p>
+            </div>
+            
+              <!-- Modal -->
+              <div class="modal fade" id="myModal1" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content" style="text-align: justify">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">MEMBER</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="container-fluid">
+                           <div class="row1" style="margin: 0">
+                            <div class="col-sm-4"><a href="https://www.youtube.com/embed/JjQi6D8qOGc" target="_blank"><img src="profile/miyeon_.jpg" style="width: 100%"></a></div>
+                            <div class="col-sm-8" style="border: 1px solid black; border-radius: 10px"><br>
+                                <table>
+                                    <tr>
+                                        <td>이름</td>
+                                        <td> 조미연</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>포지션</td>
+                                        <td>메인보컬</td>
+                                    </tr>
+                                    <tr>
+                                        <td>생년월일</td>
+                                        <td>1997년 1월 31일</td>
+                                    </tr>
+                                    <tr>
+                                        <td>국적</td>
+                                        <td>대한민국</td>
+                                    </tr>
+                                    <tr>
+                                        <td>취미</td>
+                                        <td>음악감상, 잠자기, 네일아트</td>
+                                    </tr>
+                                    <tr>
+                                        <td>특기</td>
+                                        <td>기타</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가족관계</td>
+                                        <td>부모님</td>
+                                    </tr>
+                                </table><hr>
+
+                                <p>&#8226; 미연은 2018년 5월 2일 데뷔한 대한민국의 아이돌 그룹 (여자)아이들의 멤버이다. 민니와 함께 그룹에서 메인보컬을 담당하고 있다. 민니가 독특한 음색으로 곡의 포인트를 살리는 것과 달리 미연은 청량한 미성으로 주로 곡의 후렴구를 차지한다.<br><br>&#8226; 전 세계적으로 사랑 받았던 음원 K/DA - POP/STARS의 아리로도 유명하다.
+                                </p><hr>
+
+                                <h3>데뷔 전</h3>
+                                <p>&#8226; YG 연습생 출신_중학교 1학년부터 5년 동안 연습생으로 있었다.<br>&nbsp;'핑크펑크'라는 BLACKPINK 멤버가 포함된 다인조 그룹 예상멤버였으나 데뷔가 좌절되어 퇴사.</p>
+                                <p>&#8226; '일반인들의 소름돋는 라이브' 채널에서 민니와 함께 '댕댕이 자매' 라는 이름으로 가요 커버 영상을 업로드했다.</p>
+                                <a href="https://www.youtube.com/watch?v=r0rDWEw5wOU&feature=youtu.be" target="_blank"><p>[일소라] 댕댕이 자매의 그리워하다(비투비) cover</p></a>
+                                <a href="https://www.youtube.com/watch?v=y6XK4qYj1Vs&feature=youtu.be" target="_blank"><p>[일소라] 댕댕이 자매의 사랑을 했다(IKON - LOVE SCENARIO) cover</p></a>
+                                <a href="https://www.youtube.com/watch?v=KXB-9PeJbb8&feature=youtu.be" target="_blank"><p>[일소라] 댕댕이 자매의 노력(박원) cover</p></a>
+                                <a href="https://www.youtube.com/watch?v=PEW3tg4K2I4&feature=youtu.be" target="_blank"><p>[일소라] 댕댕이 자매의 #첫사랑(볼빨간사춘기) cover</p><br></a>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="content" >
+              <!-- Trigger the modal with a button -->
+              <button type="button" class="btn" id="mybtn2" data-toggle="modal" data-target="#myModal2" style="padding: 0"><a href="#myModal2"><img class="myImg" src="profile/soojin_.jpg" style="width: 100%; margin-bottom: 0px"></a></button>
+                <p style="display: inline-block; font-size: 1.1em; padding-top: 10px">서수진</p>
+                <p style="display: inline-block; font-size: 0.9em">Main Dancer</p>
+            </div>
+            
+             <!-- Modal -->
+              <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content" style="text-align: justify">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">MEMBER</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="container-fluid">
+                           <div class="row1" style="margin: 0">
+                            <div class="col-sm-4"><a href="https://www.youtube.com/watch?v=-x1hWUFbpyg&feature=emb_title" target="_blank"><img src="profile/soojin_.jpg" style="width: 100%"></a></div>
+                            <div class="col-sm-8" style="border: 1px solid black; border-radius: 10px"><br>
+                                <table>
+                                    <tr>
+                                        <td>이름</td>
+                                        <td> 서수진</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>포지션</td>
+                                        <td>메인댄서, 서브보컬</td>
+                                    </tr>
+                                    <tr>
+                                        <td>생년월일</td>
+                                        <td>1998년 3월 9일</td>
+                                    </tr>
+                                    <tr>
+                                        <td>국적</td>
+                                        <td>대한민국</td>
+                                    </tr>
+                                    <tr>
+                                        <td>취미</td>
+                                        <td>산책하기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>특기</td>
+                                        <td>요리하기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가족관계</td>
+                                        <td>부모님, 여동생</td>
+                                    </tr>
+                                </table><hr>
+
+                                <p>&#8226; 수진은 2018년 5월 2일 데뷔한 대한민국의 아이돌 그룹 (여자)아이들의 멤버이다. 그룹에서 메인댄서와 서브보컬을 담당하고 있다.<br><br>&#8226; 예쁜 춤선이 돋보이는 댄스 에이스로, 메인댄서답게 (여자)아이들 멤버 중 최고의 춤실력을 자랑한다. 손끝과 발끝의 디테일까지 놓치지 않고, 물 흐르듯 추며 강약 조절을 잘한다는 평이 많다.<br><br>&#8226; 시원시원하고 부드러운 춤선이 특징. 멤버들 사이에서도 유독 가늘고 긴 팔다리 덕분에 춤출때 더욱 돋보인다.<br><br>&#8226; 서브보컬로서 부드럽고 매끄러운 미성이 특색이다. 수록곡에서는 곡에서의 비중이 높은 브릿지 부분을 차지하는 경우가 많으며, 메인보컬들과 비슷한 양의 파트를 받기도 한다.   
+                                </p><hr>
+
+                                <h3>데뷔 전</h3>
+                                <p>&#8226; 데뷔 전, 걸그룹 비비디바의 '앤나'로 데뷔할 뻔했지만 탈퇴</p>
+                                <p>&#8226; 총 연습생 기간_ 4년, 큐브 입사 2016년도</p>
+                                <p>&#8226; 2017년 소연의 솔로 앨범 &lt;Jelly&gt; 뮤직비디오에 출연</p>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>          
+
+            <div class="content" >
+               <!-- Trigger the modal with a button -->
+               <button type="button" class="btn" id="mybtn3" data-toggle="modal" data-target="#myModal3" style="padding: 0"><a href="#myModal3">
+                <img class="myImg" src="profile/yuqi_.jpg" style="width: 100%; margin-bottom: 0px"></a></button>
+                <p style="display: inline-block; font-size: 1.1em; padding-top: 10px">송우기</p>
+                <p style="display: inline-block; font-size: 0.9em">Serve Vocal &amp; lead Dancer</p>
+            </div>
+            
+        <!-- Modal -->
+          <div class="modal fade" id="myModal3" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <!-- Modal content-->
+              <div class="modal-content" style="text-align: justify">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">MEMBER</h4>
+                </div>
+                <div class="modal-body">
+                   <div class="container-fluid">
+                       <div class="row1" style="margin: 0">
+                        <div class="col-sm-4"><a href="https://www.youtube.com/embed/QiWKCdZBKiU" target="_blank"><img src="profile/yuqi_.jpg" style="width: 100%"></a></div>
+                        <div class="col-sm-8" style="border: 1px solid black; border-radius: 10px"><br>
+                            <table>
+                                <tr>
+                                    <td>이름</td>
+                                    <td> 송우기(Sòng Yǔqí)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>포지션</td>
+                                    <td>서브보컬, 리드댄서</td>
+                                </tr>
+                                <tr>
+                                    <td>생년월일</td>
+                                    <td>1999년 9월 23일</td>
+                                </tr>
+                                <tr>
+                                    <td>국적</td>
+                                    <td>중국</td>
+                                </tr>
+                                <tr>
+                                    <td>취미</td>
+                                    <td>춤, 랩</td>
+                                </tr>
+                                <tr>
+                                    <td>특기</td>
+                                    <td>따이춤, 고쟁 연주</td>
+                                </tr>
+                                <tr>
+                                    <td>가족관계</td>
+                                    <td>부모님</td>
+                                </tr>
+                            </table><hr>
+
+                            <p>&#8226; 우기는 2018년 5월 2일 데뷔한 대한민국의 아이돌 그룹 (여자)아이들의 멤버이다. 그룹에서 서브보컬, 리드댄서를 담당하고 있다.<br><br>&#8226;  (여자)아이들 멤버들 중 가장 낮은 음색을 갖고 있어 파트 구별이 쉽다.  귀여운 외모와 달리 허스키한 저음 목소리를 가지고 있다. 외국인 멤버지만 한국어 발음이 상당히 좋은 편이다.<br><br>&#8226; 파워풀한 춤선의 소유자로, 리드댄서를 담당하고 있다. 동작이 크고 춤을 힘있게 추며 춤선이 절도 있는 편이다. 그룹의 메인댄서인 수진의 부드럽고 유려한 춤선과는 대조적이다. <br><br>&#8226; 밝은 성격과 특유의 귀여움으로 그룹 내에서 입덕을 담당하고 있는 만큼 멤버 중 개인 방송 출연 빈도가 가장 높다.<br><br>&#8226; 한국어 실력이 대단히 출중하다. 수준급의 어휘력은 물론, 억양도 한국인과 버금갈 정도로 자연스러워서, 한국인인 줄 알았다고 한 팬들도 다수 존재한다. 팬들 사이에서는 '아이들 중 유일한 한국인' 이라는 우스갯소리까지 있다.
+                            </p><hr>
+
+                            <h3>데뷔 전</h3>
+                            <p>&#8226; 연습생 시절, 딩고 스토리의 세상의 온도에 출연했다.</p>
+                            <div class="container-iframe">
+                                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/MbHVHQstS9w" name="frame1"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        
+        <div class="column" id="col2">
+            <div class="content" >
+               <!-- Trigger the modal with a button -->
+               <button type="button" class="btn" id="mybtn4" data-toggle="modal" data-target="#myModal4" style="padding: 0"><a href="#myModal4">
+                <img class="myImg" src="profile/minnie.jpg" style="width: 100%; margin-bottom: 0px"></a></button>
+                <p style="display: inline-block; font-size: 1.1em; padding-top: 10px">민니&nbsp;</p>
+                <p style="display: inline-block; font-size: 0.9em">Main Vocal</p>
+            </div>
+            
+             <!-- Modal -->
+              <div class="modal fade" id="myModal4" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content" style="text-align: justify">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">MEMBER</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="container-fluid">
+                           <div class="row1" style="margin: 0">
+                            <div class="col-sm-4"><a href="https://www.youtube.com/watch?v=0MhbxMJlq_M" target="_blank"><img src="profile/minnie.jpg" style="width: 100%"></a></div>
+                            <div class="col-sm-8" style="border: 1px solid black; border-radius: 10px"><br>
+                                <table>
+                                    <tr>
+                                        <td>이름</td>
+                                        <td> 민니(니차 욘따라락)</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>포지션</td>
+                                        <td>메인보컬</td>
+                                    </tr>
+                                    <tr>
+                                        <td>생년월일</td>
+                                        <td>1997년 10월 23일</td>
+                                    </tr>
+                                    <tr>
+                                        <td>국적</td>
+                                        <td>태국</td>
+                                    </tr>
+                                    <tr>
+                                        <td>취미</td>
+                                        <td>쇼핑하기, 산책하기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>특기</td>
+                                        <td>작곡, 피아노</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가족관계</td>
+                                        <td>부모님, 오빠 2명</td>
+                                    </tr>
+                                </table><hr>
+
+                                <p>&#8226; 민니는 2018년 5월 2일 데뷔한 대한민국의 아이돌 그룹 (여자)아이들의 멤버이다. 그룹에서 메인보컬을 담당하고 있다. 미연이 청량한 미성으로 후렴구를 부르는 것과 달리 민니는 부드럽고 독특한 음색으로 곡의 포인트를 살리는, 매력적인 보이스로 곡을 살리는 감성적인 메인보컬이다.<br><br>&#8226; 소연과 함께 (여자)아이들의 작곡가이기도 하다. (여자)아이들의 두 번째 미니앨범 ⟪I made⟫에 자작곡 'Blow Your Mind'가, 일본 데뷔 앨범⟪LATATA(앨범)⟫에 자작곡 'For you'가 수록되면서 본격적으로 작곡가로서의 모습도 보여주고 있다.<br><br>&#8226; 몽환적이면서 신비로운 분위기의 소유자. 반쯤 감은 눈과 삼백안이 어우러져 매력적인 눈매가 특징이다.<br><br>&#8226; 팀내 외국인 멤버 3인방 중에서는 한국 생활 경험이 가장 많은 멤버답게 가장 한국어 발음과 실력이 좋다.<br><br>&#8226; 모국어인 태국어를 포함해서 한국어, 영어, 중국어, 일본어 총 5개 국어를 할 수 있다.</p><hr>
+
+                                <h3>데뷔 전</h3>
+                                <p>&#8226; 총 연습생 기간_ 3년</p>
+                                <p>&#8226; 데뷔 전, 언프리티랩스타3 대구콘서트에서 소연의 '웃어' 무대의 피처링을 했다.</p>
+                                <p>&#8226; '일반인들의 소름돋는 라이브' 채널에서 미연과 함께 '댕댕이 자매' 라는 이름으로 가요 커버 영상을 업로드했다.</p>
+                                <a href="https://www.youtube.com/watch?v=r0rDWEw5wOU&feature=youtu.be" target="_blank"><p>[일소라] 댕댕이 자매의 그리워하다(비투비) cover</p></a>
+                                <a href="https://www.youtube.com/watch?v=y6XK4qYj1Vs&feature=youtu.be" target="_blank"><p>[일소라] 댕댕이 자매의 사랑을 했다(IKON - LOVE SCENARIO) cover</p></a>
+                                <a href="https://www.youtube.com/watch?v=KXB-9PeJbb8&feature=youtu.be" target="_blank"><p>[일소라] 댕댕이 자매의 노력(박원) cover</p></a>
+                                <a href="https://www.youtube.com/watch?v=PEW3tg4K2I4&feature=youtu.be" target="_blank"><p>[일소라] 댕댕이 자매의 #첫사랑(볼빨간사춘기) cover</p><br></a>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>           
+            
+            <div class="content" >
+               <!-- Trigger the modal with a button -->
+               <button type="button" class="btn" id="mybtn5" data-toggle="modal" data-target="#myModal5" style="padding: 0"><a href="#myModal5">
+                <img class="myImg" src="profile/soyeon_.jpg" style="width: 100%; margin-bottom: 0px"></a></button>
+                <p style="display: inline-block; font-size: 1.1em; padding-top: 10px">전소연</p>
+                <p style="display: inline-block; font-size: 0.9em">leader &amp; Main Rapper</p>
+            </div>
+            
+            <!-- Modal -->
+              <div class="modal fade" id="myModal5" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content" style="text-align: justify">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">MEMBER</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="container-fluid">
+                           <div class="row1" style="margin: 0">
+                            <div class="col-sm-4"><a href="https://www.youtube.com/embed/taV8OA1FWjk" target="_blank"><img src="profile/soyeon_.jpg" style="width: 100%"></a></div>
+                            <div class="col-sm-8" style="border: 1px solid black; border-radius: 10px"><br>
+                                <table>
+                                    <tr>
+                                        <td>이름</td>
+                                        <td> 전소연</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>포지션</td>
+                                        <td>리더, 메인래퍼</td>
+                                    </tr>
+                                    <tr>
+                                        <td>생년월일</td>
+                                        <td>1998년 8월 26일</td>
+                                    </tr>
+                                    <tr>
+                                        <td>국적</td>
+                                        <td>대한민국</td>
+                                    </tr>
+                                    <tr>
+                                        <td>취미</td>
+                                        <td>만화보기, 다큐, 인라인 스케이트, 책</td>
+                                    </tr>
+                                    <tr>
+                                        <td>특기</td>
+                                        <td>랩, 댄스</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가족관계</td>
+                                        <td>부모님, 여동생</td>
+                                    </tr>
+                                </table><hr>
+
+                                <p>&#8226; 소연은 2018년 5월 2일 데뷔한 대한민국의 아이돌 그룹 (여자)아이들의 리더이자 메인래퍼이다. 또한 작곡가, 작사가, 편곡가, 프로듀서로서의 역할도 담당하고 있다.<br><br>&#8226; 직접 작사, 작곡, 편곡을 하고 노래, 춤, 랩, 리더십, 끼 등 아이돌로서 재량의 최고 수준을 보여주어 음악적 평가 역시 높다. 현 세대 만능돌이자 음악적 천재라는 별명을 가진 아티스트. 그만큼 그룹활동에서 활동컨셉이나 곡 기획에 참여지분이 높은 멤버로, (여자)아이들 그룹의 색을 결정짓는 데 가장 많은 영향을 미치는 멤버<br><br>&#8226; 뛰어난 랩실력과 함께 보컬과 댄스도 수준급이다. 보컬의 경우 비공식적으로 서브보컬을 맡고 있으며, 음색이 잘 튀고 곡 곳곳에서 눈에 띈다. 댄스의 경우 어렸을 때 했던 발레 경험을 살려 팀 내 수진, 우기와 함께 댄스 라인을 맡고 있다.<br><br>&#8226; 프로듀스 101, 언프리티 랩스타 3, 컴백전쟁: 퀸덤 등 서바이벌 다수 출연자. 세 프로에서 모두 참여자 중 가장 이득을 톡톡히 챙긴 멤버 중 하나이다. 매번 서바이벌 때마다 상당한 임팩트를 남기며 천재성을 보여주어 서바이벌이 낳은 괴물이라는 별칭을 얻었다.<br><br>&#8226; 리그 오브 레전드에서 스킨 프로젝트 그룹으로 발표한 K/DA - POP/STARS와 True Damage - GIANTS의 아칼리 역으로도 유명하다.
+                                </p>
+                                <div class="container-iframe">
+                                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Ix_Kp7R1_Ok" name="frame1"></iframe>
+                                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Ix_Kp7R1_Ok" name="frame1"></iframe>
+                                </div><hr>
+
+                                <h3>데뷔 전</h3>
+                                <p>&#8226; 프로듀스 101 참가_최종 순위 20위</p>
+                                <p>&#8226; 언프리티 랩스타3 참가_세미 파이널 진출</p>
+                                <p>&#8226; 2016년 10월, 텐아시아 화보 촬영</p>
+                                <p>&#8226; 2016년 10월, 에잇세컨즈 광고 촬영</p>
+                                <p>&#8226; 2016년 10월 19일, 동대문디자인플라자(DDP)에서 열린 '2017 S/S 헤라 서울패션위크'에 참석. 다음날인 20일, 디자이너 강동준의 디그낙(D.GNAK) 컬렉션에 참석</p><hr>
+
+                                <h3>솔로 활동</h3>
+                                <p>&#8226; 2017년 11월 5일, 싱글 'Jelly'를 발매</p>
+                                <p>&#8226; 2018년 2월 28일, 싱글 '아이들 쏭'을 발매</p>
+                                <p>&#8226; 2019년 6월 8일 큐브엔터테인먼트 공식 유튜브 계정을 통해 자작곡 '애정결핍' 공개</p>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+            <div class="content" >
+               <!-- Trigger the modal with a button -->
+               <button type="button" class="btn" id="mybtn6" data-toggle="modal" data-target="#myModal6" style="padding: 0"><a href="#myModal6">
+                <img class="myImg" src="profile/shuwha_.jpg" style="width: 100%; margin-bottom: 0px"></a></button>
+                <p style="display: inline-block; font-size: 1.1em; padding-top: 10px">예슈화</p>
+                <p style="display: inline-block; font-size: 0.9em">Serve Vocal</p>
+            </div>
+            <!-- Modal -->
+              <div class="modal fade" id="myModal6" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <!-- Modal content-->
+                  <div class="modal-content" style="text-align: justify">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">MEMBER</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="container-fluid">
+                           <div class="row1" style="margin: 0">
+                            <div class="col-sm-4"><a href="https://www.youtube.com/embed/NU6IS2Y7FOM" target="_blank"><img src="profile/shuwha_.jpg" style="width: 100%"></a></div>
+                            <div class="col-sm-8" style="border: 1px solid black; border-radius: 10px"><br>
+                                <table>
+                                    <tr>
+                                        <td>이름</td>
+                                        <td> 예슈화</td>
+                                    </tr>
+                                    <tr>
+                                        <td>포지션</td>
+                                        <td>서브보컬</td>
+                                    </tr>
+                                    <tr>
+                                        <td>생년월일</td>
+                                        <td>2000년 1월 6일</td>
+                                    </tr>
+                                    <tr>
+                                        <td>국적</td>
+                                        <td>대만</td>
+                                    </tr>
+                                    <tr>
+                                        <td>취미</td>
+                                        <td>연기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>특기</td>
+                                        <td>연기</td>
+                                    </tr>
+                                    <tr>
+                                        <td>가족관계</td>
+                                        <td>부모님, 언니, 여동생</td>
+                                    </tr>
+                                </table><hr>
+
+                                <p>&#8226; 슈화는 2018년 5월 2일 데뷔한 대한민국의 아이돌 그룹 (여자)아이들의 멤버이다. 그룹에서 서브보컬을 담당하고 있다.<br><br>&#8226; 다른 외국인 멤버들보다 한국어 발음이 서툴러서인지 보컬 분량이 가장 적다. 파트는 적더라도, 임팩트있는 부분을 맡는 경우가 많다.<br><br>&#8226; 퀸덤 [FINAL 컴백 싱글] 참여곡인 LION에선 많은 분량의 파트와, FINAL 무대의 중요한 도입부 인트로를 혼자 소화한다. 무대에서만큼은 정확해진 한국어 발음과 그동안 파트가 적어 가려져 있었던 슈화의 독특한 보컬을 팬들이 발견하게 된 계기이기도 하다.<br><br>&#8226; 공식 댄스 포지션이 아니지만, 춤선이 예쁘다. 꾸준한 연습과 노력으로 실력이 크게 상승했다. 나이가 어리고 발전도 빠르니, 앞으로의 성장 가능성이 크게 기대가 되는 멤버.
+                                </p><hr>
+
+                                <h3>데뷔 전</h3>
+                                <p>&#8226; 10cm의 pet 뮤직비디오에 출연</p>
+                                <p>&#8226; 총 연습생 기간_ 3년2개월</p>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>    
+        </div>
+    </div>
+</div>
+
+
+<!-- 푸터--> 
+<footer class="container-fluid text-center">
+<div class="sns_menu">
+    <a href="https://www.facebook.com/G.I.DLE.CUBE" title="페이스북" target="_blank"><img src="facebook.png"></a>
+    <a href="https://www.instagram.com/official_g_i_dle/" title="인스타그램"  target="_blank"><img src="instagram.png"></a>
+    <a href="https://twitter.com/G_I_DLE" title="트위터" target="_blank"><img src="twitter.png"></a>
+    <a href="https://www.youtube.com/gidleofficial" title="유튜브" target="_blank"><img src="youtube.png"></a>
+</div>
+ <p>서울시 성동구 아차산로 83길 F2빌딩 CUBE ENTERTAINMENT  |  전화 02-3445-1045</p>
+  <p>COPYRIGHT &copy;2018 CUBE ENTERTAINMENT CO. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+//modal
+$(document).ready(function(){
+  $("#mybtn1").click(function(){
+    $("#myModal1").modal({backdrop: "static"});
+  });
+});    
+
+$(document).ready(function(){
+  $("#mybtn2").click(function(){
+    $("#myModal2").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn3").click(function(){
+    $("#myModal3").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn4").click(function(){
+    $("#myModal4").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn5").click(function(){
+    $("#myModal5").modal({backdrop: "static"});
+  });
+});
+$(document).ready(function(){
+  $("#mybtn6").click(function(){
+    $("#myModal6").modal({backdrop: "static"});
+  });
+});
+    
+
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+    var x = document.getElementsByClassName("navbar");
+    x[0].style.top = "0"; //맨 위에서 20px 스크롤 다운하면 navbar가 내려옴 
+    
+  } 
+  else {
+    mybutton.style.display = "none";
+    var x =document.getElementsByClassName("navbar");
+    x[0].style.top = "-60px";
+     
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>(G)I-DLE/HISTORY</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+         
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JQuery 최신버전-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+SC:wght@900&family=Permanent+Marker&family=Raleway:wght@500;600&display=swap');
+        
+    body {
+       font-family: 'Raleway', sans-serif;
+       font-weight: 600;  
+       font-size: 1.5em;
+    }
+    .container {
+       font-family: 'Raleway', sans-serif;
+       font-weight: 500;  
+       font-size: 1.5em;
+    }    
+        
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      font-weight: 600; 
+    }
+    .navbar-custom {
+        background-color: black;
+    }
+    .navbar-brand {
+        padding: 0 50px 0 30px;
+    }       
+    .navbar-brand img {
+        overflow: hidden;
+        position: relative;
+        height: 50px;
+        width: 67px;
+    }
+     #myNavbar a:hover {
+        background: #E11900; 
+    } 
+    #myNavbar a:active {
+        background: #E11900; 
+    }        
+    
+    .bg {
+      /* The image used */
+      background-image: url("jacket/gidle_senorita.jpg");
+      background-attachment: fixed;
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 50%;
+      margin-bottom: 70px;
+    }  
+    .bg-cover{
+       position: absolute;
+       height: 50%;
+       width: 100%;
+       background-color: rgba(0, 0, 0, 0.5);   
+       z-index:1;
+    }
+    .bg .content{
+     position: absolute;
+     top:38%;
+     left:50%;
+     transform: translate(-50%, -50%);
+     font-size:1.5rem;
+     color: white;
+     z-index: 2;
+     text-align: center;
+    }
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      width: 45px;
+      height: 45px;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 13px;
+      border: 2px solid white;
+      outline: none;
+      background-color: #feceab;
+      color: white;
+      cursor: pointer;
+      padding: 7px;
+      border-radius: 50%;
+    }
+    #myBtn:hover {
+      background-color: black;
+      border: 2px solid black;
+    }    
+        
+    /*상단바 버튼*/
+    .btn-group button { 
+      display: block;
+      background-color: inherit;
+      color: white;
+      padding: 22px 16px;
+      width: inherit;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    .btn-group button:hover {
+      background-color: #A7A8A9;
+    }  
+    .bottom-left {
+      position: absolute;
+      bottom: 13px;
+      left: 25px;
+      font-size: 25px; 
+      font-family: 'HY울릉도M';
+    }
+    hr {
+        border: 0;
+        height: 2px;
+        background-color: #EAE6DA;
+    }
+    
+    .img-cover{
+       position: ;
+       height: 30%;
+       width: 30%;
+       background-color: rgba(0, 0, 0, 0.5);               
+       z-index:1;
+    }    
+    .tablink {
+        color: black; 
+    }
+    .tablink1 {
+        color: black;
+    }
+        
+    table {
+        text-align: left;
+        margin-left: 35px;
+    }
+    td {
+        padding-right: 20px;
+        padding-bottom: 6px;
+    }
+    @media screen and (min-width: 801px) {
+      table {
+        font-size: 17px;
+      }
+      .tablink {
+        font-size: 19px;
+      }
+      .tablink1 {
+        font-size: 19px;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      table {
+        font-size: 2.18vw;
+        margin-left: 0px;  
+      }
+      .tablink {
+        font-size: 3vw;
+      }
+      .tablink1 {
+        font-size: 3vw;
+      } 
+    }
+        
+    footer {
+      padding: 25px;
+      background-color: #feceab;
+      font-weight: 600; 
+    }
+    .sns_menu img {
+        width: 30px; 
+        background-color: #feceab;
+        margin: 5px 10px 10px 5px;
+        padding: 5px 5px 5px 5px;
+        
+    }
+    </style>
+</head>
+<body>
+
+<!-- navbar -->
+<nav class="navbar navbar-custom navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href=".\idle.html"><img src="logo_1.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href=".\idle.html">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">(G)I-DLE<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href=".\introduction.html">INTRODUCTION</a></li>
+            <li><a href=".\member.html">MEMBER</a></li>
+          </ul>
+        </li>
+        <li><a href=".\history.html">HISTORY</a></li>
+        <li><a href=".\music.html">MUSIC</a></li>
+        <li><a href=".\gallery.html">GALLERY</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="bg">
+  <div class="content">
+      <h1>HISTORY</h1>
+  </div>
+  <div class="bg-cover"></div>
+</div>
+
+
+<!-- Main Content -->
+<div class="container text-center" style="margin-bottom: 70px">
+  <div class="w3-row">
+    <a href="javascript:void(0)" onclick="openList(event, 'Discography');">
+      <div class="w3-third tablink w3-border-red w3-bottombar w3-hover-light-grey w3-padding">DISCOGRAPHY</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openList(event, 'Awards');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">AWARDS</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openList(event, 'Career');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">CAREER</div>
+    </a>
+  </div>
+
+  <div id="Discography" class="w3-container list">
+    <div class="album" style="margin-top: 30px">
+            <table class="album_list">
+                <tr>
+                    <td class="date">2020. 05</td>
+                    <td class="name">디지털싱글</td>
+                    <td class="title">LATATA (English Ver.)</td>
+                </tr>
+                <tr>
+                    <td class="date">2020. 05</td>
+                    <td class="name">미니앨범</td>
+                    <td class="title">(G)I-DLE 3rd MINI ALBUM 'I TRUST' / TITLE: I TRUST</td>
+                </tr>
+                <tr>
+                    <td class="date">2019. 07</td>
+                    <td class="name">미니앨범</td>
+                    <td class="title">LATATA /TITLE: LATATA (Japanese ver.)</td>
+                </tr>
+                <tr>
+                    <td class="date">2019. 06</td>
+                    <td class="name">디지털싱글</td>
+                    <td class="title">Uh-Oh</td>
+                </tr>
+                <tr>
+                    <td class="date">2019. 02</td>
+                    <td class="name">미니앨범</td>
+                    <td class="title">(G)I-DLE 2nd MINI ALBUM 'I MADE' / TITLE: Senorita</td>
+                </tr>
+                <tr>
+                    <td class="date">2018. 08</td>
+                    <td class="name">디지털싱글</td>
+                    <td class="title">한(-)</td>
+                </tr>
+                <tr>
+                    <td class="date">2018. 05</td>
+                    <td class="name">미니앨범</td>
+                    <td class="title">(G)I-DLE 1st MINI ALBUM 'I AM' / TITLE: LATATA</td>
+                </tr>
+            </table>
+      </div>
+  </div>
+
+  <div id="Awards" class="w3-container list" style="display:none">
+   <div class="awards" style="margin-top: 30px">
+            <table class="awards_list">
+                <tr>
+                    <td class="year">2020</td>
+                    <td class="award">2019 더팩트 뮤직 어워즈&nbsp;&nbsp;&nbsp;올해의 댄스퍼포머 상</td>
+                </tr>
+                <tr>
+                    <td class="year">2020</td>
+                    <td class="award">제 34회 일본 골든디스크 대상&nbsp;&nbsp;&nbsp;베스트 3 뉴 아티스트상</td>
+                </tr>
+                <tr>
+                    <td class="year">2020</td>
+                    <td class="award">제 9회 가온차트 뮤직 어워드&nbsp;&nbsp;&nbsp;올해의 월드 루키상</td>
+                </tr>
+                <tr>
+                    <td class="year">2020</td>
+                    <td class="award">제 34회 골든디스크 시상식&nbsp;&nbsp;&nbsp;베스트 퍼포먼스</td>
+                </tr>
+                <tr>
+                    <td class="year">2019</td>
+                    <td class="award">2019 아시아 아티스트 어워즈&nbsp;&nbsp;&nbsp;AAA Groove Award</td>
+                </tr>
+                <tr>
+                    <td class="year">2019</td>
+                    <td class="award">2019 소리바다 베스트 케이뮤직 어워드&nbsp;&nbsp;&nbsp;뉴 웨이브 상</td>
+                </tr>
+                <tr>
+                    <td class="year">2019</td>
+                    <td class="award">2019 아시아 모델 어워즈&nbsp;&nbsp;&nbsp;가수 신인상</td>
+                </tr>
+                <tr>
+                    <td class="year">2019</td>
+                    <td class="award">제 1회 더팩트 뮤직 어워즈&nbsp;&nbsp;&nbsp;Next Leader</td>
+                </tr>
+                <tr>
+                    <td class="year">2019</td>
+                    <td class="award">제 8회 가온차트 뮤직 어워드&nbsp;&nbsp;&nbsp;올해의 신인상 음원 부문</td>
+                </tr>
+                <tr>
+                    <td class="year">2019</td>
+                    <td class="award">제 33회 골든디스크 시상식&nbsp;&nbsp;&nbsp;음원 신인상</td>
+                </tr>
+                <tr>
+                    <td class="year">2018</td>
+                    <td class="award">2018 대한민국 대중 음악 시상식&nbsp;&nbsp;&nbsp;신인상</td>
+                </tr>
+                <tr>
+                    <td class="year">2018</td>
+                    <td class="award">2018 엠넷 아시안 뮤직 어워드&nbsp;&nbsp;&nbsp;베스트 오브 넥스트상</td>
+                </tr>
+                <tr>
+                    <td class="year">2018</td>
+                    <td class="award">2018 멜론 뮤직 어워드 여자&nbsp;&nbsp;&nbsp;신인상</td>
+                </tr>
+                <tr>
+                    <td class="year">2018</td>
+                    <td class="award">2018 아시아 아티스트 어워즈&nbsp;&nbsp;&nbsp; 신인상</td>
+                </tr>
+                <tr>
+                    <td class="year">2018</td>
+                    <td class="award">2018 MBC플러스 지니뮤직 어워드&nbsp;&nbsp;&nbsp;여자 신인상</td>
+                </tr>
+            </table>
+      </div>
+  </div>
+
+  <div id="Career" class="w3-container list" style="display:none">
+    <div class="career" style="margin-top: 30px">
+            <table class="ad">
+                <tr>
+                    <td class="year">2020</td>
+                    <td class="award">렌즈미</td>
+                </tr>
+                <tr>
+                    <td class="year">2020</td>
+                    <td class="award">아키클래식</td>
+                </tr>
+                <tr>
+                    <td class="year">2019</td>
+                    <td class="award">Kaja</td>
+                </tr>
+            </table>
+      </div>
+  </div>
+</div>
+
+
+<div class="container text-center" style="margin-bottom: 70px">
+  <div class="w3-row">
+    <a href="javascript:void(0)" onclick="openList1(event, 'Collaboration');">
+      <div class="w3-half tablink1 w3-border-red w3-bottombar w3-hover-light-grey w3-padding">COLLABORATION</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openList1(event, 'Ost'); font-weight">
+      <div class="w3-half tablink1 w3-bottombar w3-hover-light-grey w3-padding">OST</div>
+    </a>
+  </div>
+
+  <div id="Collaboration" class="w3-container list1">
+    <div class="collabo" style="margin-top: 30px">
+            <table class="collabo_list">
+                <tr>
+                    <td class="date">2020. 02</td>
+                    <td class="name">투유프로젝트: 슈가맨3 EPISODE.8 _ Show</td>
+                </tr>
+                <tr>
+                    <td class="date">2019. 10</td>
+                    <td class="name">WENGIE &amp; 민니 _ EMPIRE</td>
+                </tr>
+                <tr>
+                    <td class="date">2019. 10</td>
+                    <td class="name">불후의 명곡-전설을 노래하다(Let's Dance Time 코요태) _ 비몽</td>
+                </tr>
+                <tr>
+                    <td class="date">2019. 07</td>
+                    <td class="name">행주 &amp; 미연 _ Cart</td>
+                </tr>
+                <tr>
+                    <td class="date">2019. 03</td>
+                    <td class="name">키(KEY) &amp; 소연 _ I Wanna Be</td>
+                </tr>
+                <tr>
+                    <td class="date">2018. 09</td>
+                    <td class="name">SM STATION _  Wow Thing</td>
+                </tr>
+                <tr>
+                    <td class="date">2018. 06</td>
+                    <td class="name">UNITED CUBE: ONE _ Upgrade &amp; Mermaid &amp; 한걸음</td>
+                </tr>
+            </table>
+      </div>
+  </div>
+  
+  <div id="Ost" class="w3-container list1" style="display:none">
+    <div class="ostsong" style="margin-top: 30px">
+            <table class="ost_list">
+                <tr>
+                    <td class="date">2019. 11</td>
+                    <td class="name">라이엇게임즈 _ GIANTS</td>
+                </tr>
+                <tr>
+                    <td class="date">2019. 04</td>
+                    <td class="name">그녀의 사생활 OST Part 1 _ Help Me</td>
+                </tr>
+                <tr>
+                    <td class="date">2018. 11</td>
+                    <td class="name">애니메이션 '런닝맨 시즌2' _ 달려!</td>
+                </tr>
+                <tr>
+                    <td class="date">2018. 11</td>
+                    <td class="name">라이엇게임즈 _ POP/STARS</td>
+                </tr>
+            </table>
+      </div>
+  </div>
+</div>
+
+
+<!-- 푸터--> 
+<footer class="container-fluid text-center">
+<div class="sns_menu">
+    <a href="https://www.facebook.com/G.I.DLE.CUBE" title="페이스북" target="_blank"><img src="facebook.png"></a>
+    <a href="https://www.instagram.com/official_g_i_dle/" title="인스타그램"  target="_blank"><img src="instagram.png"></a>
+    <a href="https://twitter.com/G_I_DLE" title="트위터" target="_blank"><img src="twitter.png"></a>
+    <a href="https://www.youtube.com/gidleofficial" title="유튜브" target="_blank"><img src="youtube.png"></a>
+</div>
+ <p>서울시 성동구 아차산로 83길 F2빌딩 CUBE ENTERTAINMENT  |  전화 02-3445-1045</p>
+  <p>COPYRIGHT &copy;2018 CUBE ENTERTAINMENT CO. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+
+<script>
+//Tabs in a Grid
+function openList(evt, listName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("list");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+  }
+  document.getElementById(listName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-red"
+}
+    
+function openList1(evt, listName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("list1");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink1");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+  }
+  document.getElementById(listName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-red";
+}
+    
+    
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+    var x = document.getElementsByClassName("navbar");
+    x[0].style.top = "0"; //맨 위에서 20px 스크롤 다운하면 navbar가 내려옴 
+    
+  } 
+  else {
+    mybutton.style.display = "none";
+    var x =document.getElementsByClassName("navbar");
+    x[0].style.top = "-60px";
+     
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
